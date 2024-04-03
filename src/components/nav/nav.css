@@ -1,0 +1,89 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  color: #0d6959;
+  height: auto;
+  width: 100%;
+  margin-bottom: 80px;
+  position: fixed;
+  background-color: rgba(51, 51, 51, 0.5);
+  box-shadow: 10px 10px 10px rgba(153, 153, 153, 0.5);
+  padding: 10px;
+}
+.nav .nav-div .nav-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  gap: 10px;
+  font-size: 1.875rem;
+}
+.nav .nav-div .nav-logo img {
+  width: 75px;
+  height: 75px;
+}
+.nav .nav-div .nav-logo .logo-text {
+  color: #e2c479;
+}
+.nav .nav-div .nav-icon {
+  display: none;
+  color: #e2c479;
+}
+.nav .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  font-weight: bold;
+  gap: 30px;
+  margin-right: 20px;
+}
+.nav .nav-links:link, .nav .nav-links :visited, .nav .nav-links :hover, .nav .nav-links :active {
+  color: #e2c479;
+}
+.nav .donateBtn {
+  background-color: #bb8b10;
+  padding: 5px;
+  border-radius: 5px;
+}
+.nav .donateBtn:link, .nav .donateBtn :visited, .nav .donateBtn :hover, .nav .donateBtn :active {
+  color: #fefefe;
+}
+
+@media only screen and (max-width: 992px) {
+  .nav {
+    flex-direction: column;
+  }
+  .nav .nav-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+  }
+  .nav .nav-div .nav-icon {
+    display: block;
+  }
+  .nav .nav-links {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    gap: 10px;
+    display: none;
+  }
+  .nav .nav-links.show {
+    display: flex;
+  }
+  .nav .nav-links .nav-link {
+    flex-direction: column;
+    gap: 10px;
+  }
+}/*# sourceMappingURL=nav.css.map */

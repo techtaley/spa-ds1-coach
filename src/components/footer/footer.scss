@@ -1,0 +1,89 @@
+@import './../../styles/variables/variables.scss';
+
+footer {    
+    width: 100%;
+    bottom: 0;
+    background-color: $accent-dk;
+    color: $light-lt;    
+
+    .footer-top {
+        @include flexdisplay(row, space-between, center);
+        margin: 20px 0;
+        padding: 2% 15%;
+
+        .footer-div {
+            @include flexdisplay(column, flex-start, flex-start);  
+            font-size: $captionfont;
+            gap: 5px;
+
+            .footer-link {
+                color: $light-lt;
+            }
+
+            .column_div {
+                @include flexdisplay(column, flex-start, flex-start);  
+                gap: 20px;
+            }
+        }
+           
+
+        .nav-logo {
+            @include flexdisplay(row, flex-start, center);
+            gap: 10px;  
+
+
+            .row_div {
+                @include flexdisplay(row, flex-start, center); 
+                gap: 10px;
+
+                a:link.logo-link, a:hover.logo-link, a:visited.logo-link, a:active.logo-link {
+                    color: $light-lt;
+                }                
+            } 
+            
+            .footer_link {
+                color: $light-lt;
+                font-size: $captionfont;
+            }
+            
+            h1 {
+                color: $light-lt; 
+            }
+      
+            img {
+                width: 50px;
+                height: 50px;
+            } 
+        } 
+    }
+
+    
+    .footer-bottom {
+        background-color: #333333;
+        padding: 15px 0;
+        color: $light-lt;
+        font-size: $captionfont;
+        text-align: center;
+
+        
+        a:link.footer-link, a:hover.footer-link, a:visited.footer-link, a:active.footer-link {
+            color: $light-lt;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 992px) {
+    footer {
+        .footer-top {
+            .nav-logo {   
+                flex-direction: column;             
+
+                .row_div {
+                    flex-direction: column;             
+                } 
+            }      
+        }
+    }
+}    

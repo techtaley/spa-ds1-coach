@@ -1,0 +1,137 @@
+  //css/currentfolder/components/src/css/
+@import './../../styles/variables/variables.scss';
+
+//full screen
+.nav {
+    @include flexdisplay(row, space-between, center);
+    color: $accent-dk;
+    height: auto;
+    width: 100%;
+    margin-bottom: 80px;
+    position: fixed;
+    background-color: rgba($color: $dark-dk, $alpha: .5); 
+    box-shadow: 10px 10px 10px rgba($color: $dark-lt, $alpha: .5);
+    padding: 10px;
+
+    .nav-div {
+      .nav-logo {
+          @include flexdisplay(row, flex-start, center);
+          gap: 10px;
+          font-size: $heading;
+        
+          img {
+            width: 75px;
+            height: 75px;
+          } 
+  
+          .logo-text {
+            color: $accent-lr;
+          }
+    
+      }
+
+      .nav-icon {
+        display: none;
+        color: $accent-lr;
+      }  
+    }
+
+    .nav-links {
+      @include flexdisplay(row, flex-end, center);
+
+      font-weight: bold;
+      gap: 30px;
+      margin-right: 20px;        
+
+      &:link, :visited, :hover, :active {
+        color:  $accent-lr;   
+      } 
+    }      
+    
+
+    .donateBtn {
+      background-color: $accent-lt;
+      padding: 5px;
+      border-radius: 5px;
+
+      &:link, :visited, :hover, :active{
+        color: $light-lt;        
+      }       
+    }  
+}
+
+@media only screen and (max-width: 992px) { 
+  .nav {
+    flex-direction: column;
+
+    .nav-div {
+      @include flexdisplay(row, space-between, center);
+      width: 100%;
+
+      .nav-icon {
+        display: block;
+      }
+    }
+
+    // .nav-logo {      
+    //     img {
+  
+    //     } 
+  
+    //     .logo-text {
+    //     }
+  
+    // }
+  
+    .nav-links {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;    
+      height: auto;
+      margin-top: 0px;
+      gap: 10px;
+      display: none;
+
+      &.show {
+        display: flex;
+      }
+  
+      .nav-link {
+        flex-direction: column;
+        gap: 10px; 
+      }  
+  
+      // .nav-icon {
+      //   display: block;
+      // }      
+    }
+  
+  }
+}
+
+// @media only screen and (max-width: 992px) {  
+//   .top-nav {
+//     @include flexdisplay(row, space-between, center);
+
+//     //transition: 3s ease-in-out; 
+//     // .nav-icon {
+//     //   display: block;
+//     // }
+//   }
+ 
+// //   nav {   
+// //     justify-content: center;    
+// //     height: auto;
+// //     margin-top: 0px;
+
+// //     .hide {
+// //       display: none;
+// //     }
+
+// //     .nav-links {      
+// //       flex-direction: column;
+// //       gap: 10px; 
+// //     }
+// //   }  
+// // }
+// }

@@ -1,0 +1,216 @@
+@import './../../../styles/variables/variables.scss';
+
+.contact-form {
+    @include flexdisplay(column, center, center);  
+    height: 500px;
+    width: 400px;
+    border-radius: 5px;
+
+
+    .request-above-div { 
+        margin: 7% 0 2% 0;    
+        height: auto; 
+        
+        span.message {
+            display:block;
+            text-align:center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: red;
+        }
+        .request-above-div-title { 
+            text-align: center;
+            //font-family: $sanserif;
+            //font-size: $heading;
+            font-weight: bold;
+            //color: $accentsalmon;
+            text-shadow: .5px .5px .5px #333;
+            margin-bottom: 15px;  
+        }  
+
+        .request-above-div-form {
+            width: auto; 
+            @include flexdisplay(row, center, flex-start); 
+            border-radius: 3px;
+            //background-color: $offwhitecolor;
+
+            .left-form {
+                width: 400px;
+                margin: 2%;                
+
+                fieldset {
+                    border: none;   
+                    
+                    label{}
+
+                    legend { }
+    
+                    .form-label {
+                        margin-top: 5%;
+                    }
+
+                    .form-input {
+                        width: 300px;
+                        font-size: $subheading;
+                        height: 40px;
+                        margin: 8px 0;
+                        border-radius: 5px;
+                        padding-left: 10px;
+                        border: 1px solid #999;
+                    }
+                    
+                    .no-show {
+                        display: none;
+                    }
+    
+                    .form-input-radio {
+                        margin-left: 10%;
+                    }
+    
+                    span.form-error-msg {
+                        display: none; 
+                        color: red;                  
+                    } 
+        
+                    input:invalid[focused="true"] ~ span {
+                        display: block; 
+                    }
+                } 
+            }      
+
+            .formBtn {
+                font-size:  $normalfont;  
+                padding: 0 2%;
+                display: block;  //need to block to center - buttons, img, input are inline by default 
+                margin: 3% auto;
+                align-items: center;   
+                background-color: $accent-dk;
+                border-color: $accent-dk;
+                color: $light-lt;
+                border-radius: 3px;
+                width: 200px;
+                padding: 5px;
+                box-shadow: .5px .5px .5px #333;  
+                cursor: pointer;                            
+            }  
+
+            .contactbtn {
+                background-color: $accent-lt;
+                border: 2px solid $accent-lt;
+                color: $light-lt;
+                font-weight: bold;
+            }  
+            
+            .formBtn:hover, .formBtn:active  {
+                transform: scale(1.1);
+                transition: all .5s;                                                    
+            }  
+
+            .formBtn:active  {
+                //background-color: $accentsalmon;   
+                //color: $offwhitecolor;
+            }              
+
+            // .right-form {
+            //     width: 400px; 
+            //     margin: 2%;
+
+            //     fieldset {
+            //         border: none;
+            //         margin-bottom: 0px;
+            //         padding-bottom: 0px;
+
+            //         legend {
+            //             font-weight: normal;
+            //         }
+
+            //         .form-label {
+            //             margin-top: 5%;
+            //             margin-right: 5%; 
+            //         }
+
+            //         .features-div {
+                        
+            //             .features-select-div {
+            //                 width: 100%;
+            //                 position: relative;
+            //                 height: 100px;
+            
+            //                 option {
+
+            //                     //font-size: $normalfont;
+            //                 }
+                            
+            //                 p {
+            //                     font-size: $captionfont;
+            //                 }                                                        
+            //             }
+                        
+            //             p {
+            //             }
+            //         }                    
+            //     }
+            
+            //     .formBtn {
+            //         font-size:  $normalfont;  
+            //         padding: 0 2%;
+            //         display: block;  //need to block to center - buttons, img, input are inline by default 
+            //         margin: 3% auto;
+            //         align-items: center;   
+            //         //background-color: $accentsalmon;  
+            //         //border-color: $accentsalmon;
+            //         box-shadow: .5px .5px .5px #333;                             
+            //     }  
+                
+            //     .formBtn:hover, .formBtn:active  {
+            //         transform: scale(1.1);
+            //         transition: all .5s;                      
+                                  
+            //     }  
+
+            //     .formBtn:active  {
+            //         //background-color: $accentsalmon;   
+            //         //color: $offwhitecolor;
+            //     }  
+            // }                   
+        }
+    }   
+}
+
+@media only screen and (max-width: 800px) {
+    .request-section {    
+        .request-above-div {    
+            .request-above-div-form {
+                width: 400px;
+                @include flexdisplay(column, center, flex-start);  
+                border: 0px;
+
+                .left-form, .right-form {
+                    margin: 0%;  
+                }
+            }
+        }
+    }                
+}
+
+@media only screen and (max-width: 760px) {
+    .request-section {
+        margin-top: 15%;
+    }  
+}
+
+@media only screen and (max-width: 600px) { 
+    .request-section {
+
+        .request-above-div {
+            
+            .request-above-div-form {
+                width: 350px;
+
+                .left-form, .right-form {
+                    width: 350px;  
+                }
+            }
+        }
+    }            
+}

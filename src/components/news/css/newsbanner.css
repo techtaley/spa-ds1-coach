@@ -1,0 +1,24 @@
+.news-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  background-image: url("./../../assets/pexels-rfstudio-3810788.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+}
+.news-banner p {
+  font-size: 7rem;
+  font-weight: bold;
+  position: absolute;
+  color: rgb(187, 139, 16);
+  margin-bottom: -47px;
+  letter-spacing: 10px;
+  height: 150px;
+  text-align: center;
+}/*# sourceMappingURL=newsbanner.css.map */

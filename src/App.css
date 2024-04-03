@@ -1,0 +1,61 @@
+/* global defaults start */
+
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+  }
+  
+  .app {
+    margin: 0;
+  }
+  
+  body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    font-size: 1.25rem;
+    color: #333;
+    cursor: pointer;
+  }
+  body a:link,
+  body a:visited,
+  body a:active {
+    color: #333;
+    text-decoration: none;
+  }
+  body a:hover {
+    text-decoration: underline;
+    transition: all 0.04s;
+  }
+  body * {
+    font-family: "Oswald", sans-serif;
+  }
+  body * {
+    box-sizing: border-box;
+  }
+
+  section {
+    scroll-snap-type: mandatory;
+  }
+
+  section > h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 7rem;
+    margin: 40px 0;
+  }
+
+  .page-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-top: 15%;
+  }
+
+  /* header, main {
+    margin-bottom: 40px;
+  }
+   */

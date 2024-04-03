@@ -1,0 +1,42 @@
+//fonts
+$captionfont: .85rem;             //paragraph - 16px
+$normalfont: 1.25rem;    	     //paragraph fonts-20px
+$heading: 1.875rem;      	    //subheading-30px
+$subheading: 1.563rem;           //subheading-25px
+$headline: 3rem;               //use for website sections, heading-40px
+$logo: 3.125rem;                //50px
+$gigantic: 5.250rem;  
+
+//button, featured section, banner   
+//color pallete
+$black: #000000;
+
+$dark-dk: #333;
+$dark-md: #666;
+$dark-lt: #999;
+
+$accent-dk: #0d6959;
+$accent-md: #C46B12; 
+$accent-lt: #bb8b10; 
+$accent-lr: #e2c479; 
+
+$light-md: #d3d3d3;
+$light-lt: #fefefe;
+
+// $darkgrey: #333;
+// $darkslategrey: #103f22;
+// $burntorange: #C46B12; 
+// $goldenrod: rgb(187, 139, 16);  
+// $lightslategrey:  #d3d3d3;
+// $white: #ffffff; 
+
+
+
+//mixins
+@mixin flexdisplay($direction, $justifycontent: none, $alignItems: none){    
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifycontent;
+    align-items: $alignItems; 
+    margin: 0;
+}
