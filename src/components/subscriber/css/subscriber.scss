@@ -14,7 +14,7 @@
             text-align: center; 
             font-size: $heading;  
             font-weight: bold;
-            color: $goldenrod;
+            color: $accent-lt;
             text-shadow: .5px .5px .5px #333;
         }  
 
@@ -66,7 +66,7 @@
             span.message {
                 display:block;
                 text-align:center;
-                font-size: 1.5rem; 
+                font-size: 1; 
             }
 
             .formBtn {
@@ -75,16 +75,16 @@
                 display: block;  //need to block to center - buttons, img, input are inline by default 
                 margin: 3% auto;
                 align-items: center;   
-                background-color: white;  
-                border-color: white;
-                color: $darkslategrey;
+                background-color: $light-lt;
+                border-color: $light-lt;
+                color: $dark-md;
                 border-radius: 5px; 
             }  
             
             .formBtn:active {
                 border-radius: 20%;
-                background-color: #666;  
-                border-color: #666;                    
+                background-color: $dark-md;  
+                border-color: $dark-md;                    
             }
         }        
     }
@@ -141,8 +141,8 @@
 
 .component-card { 
     width: 250px;
-    border: 1px solid $darkslategrey;
-    box-shadow: 10px 5px 5px $darkslategrey;
+    border: 1px solid $dark-md;
+    box-shadow: 10px 5px 5px $dark-md;
     border-radius: 5%;
     margin: 20px;
     padding: 1%; 

@@ -5,9 +5,9 @@ import LeftTitle from "../../components/titles/LeftTitle";
 import BlogExcerpt from "../../components/hero/LeftExcerpt";
 import Box from "../../components/hero/Box";
 
-import { GiBookshelf } from 'react-icons/Gi';
-import { PiHandHeartBold } from 'react-icons/Pi';
-import { HiOutlineUserGroup } from 'react-icons/Hi';
+// import { GiBookshelf } from 'react-icons/Gi';
+// import { PiHandHeartBold } from 'react-icons/Pi';
+// import { HiOutlineUserGroup } from 'react-icons/Hi';
 import LeftEvent from "../../components/hero/LeftEvent";
 import TopBlog from "../../components/hero/TopBlog";
 import Countup from "../../components/countup/Countup";
@@ -20,7 +20,7 @@ import MultiBoxHero from "../../components/hero/MultiBoxHero";
 import Banner from './../../components/hero/Banner'
 //import { bannerImg } from './../../assets/pexels-rfstudio-3810788.jpg'
 //import Instafeed from './../../components/instafeed/InstaFeed';
-import Contact from './../../components/contact/Contact';
+import Contact from '../../components/contact/Contact';
 
 const homeTitle = {
   title: "Home",
@@ -40,7 +40,7 @@ const changeData = {
 }
 
 const quoteData = {
-  quote: "Life isn’t about waiting for the storm to pass...  It’s about learning to dance in the rain.",
+  quote: "Life isn't about waiting for the storm to pass...  It's about learning to dance in the rain.",
   author: "~ Vivian Greene"
 }
 
@@ -69,21 +69,21 @@ const impactTitle = {
 
 const impactData = [
   {
-    icon: <GiBookshelf className="icons" />,
+    // icon: <GiBookshelf className="icons" />,
     title: "Personal Coaching",
     desc: "Our certified personal coaches specialize in helping you identify your strengths and develop a personalized roadmap for success.",
     bkg: "nobkg",
     btn: "BUILD A ROADMAP"
   },
   {
-    icon: <HiOutlineUserGroup className="icons" />,
+    // icon: <HiOutlineUserGroup className="icons" />,
     title: "Career Coaching",
     desc: "Whether you're navigating a career transition, seeking to advance in your current job, or exploring new opportunities, our career coaches are here to help.",
     bkg: "nobkg",
     btn: "EXPLORE A PATH"
   },
   {
-    icon: <PiHandHeartBold className="icons" />,
+    // icon: <PiHandHeartBold className="icons" />,
     title: "Wellness Coaching",
     desc: "Our health and wellness coaches work with you to create sustainable habits, set achievable health goals, and overcome obstacles to living your best life. ",
     bkg: "nobkg",
@@ -115,18 +115,21 @@ const unicornData = {
 export default function Home() {
   return (
     <div>
+      <div id="home"></div>
       <Banner data={homeBanner} />       
 
       <QuoteHero data={quoteData} />
 
       <LeftTitle data={servicesData}/>
 
+      <div id="services"></div>
       <div className="hero multi-box-row">
         {impactData.map(impact =>         
           <MultiBoxHero data={impact} />
         )}
       </div>
 
+      <div id="about"></div>
       <LeftTitle data={aboutData}/>
 
       <LeftHero data={whoData} />  
@@ -141,10 +144,9 @@ export default function Home() {
       
       {/* <RightTestimonial />   */}
 
-
-
       {/* <Instafeed /> */}
 
+      <div id="contact"></div>
       <Contact />
     </div>
   );

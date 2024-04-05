@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './css/contact.css';
 
-export default function ContactInput ({e, handleChange, index}) {
+export default function ContactInput ({e, handleChange, value, index}) {
   const [focused, setFocused] = useState(false);
 
   const handleFocus = e => {
@@ -17,7 +17,7 @@ export default function ContactInput ({e, handleChange, index}) {
         <input  
           key={index}       
           {...e}  //get's form elements
-          value={e.value}  //gets values entered into form elements
+          value={value}  //gets values entered into form elements
           onChange={handleChange}
           onBlur={handleFocus}
           focused={focused.toString()} 

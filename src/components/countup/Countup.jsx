@@ -9,7 +9,7 @@ export default function Countup({data, index}) {
   return (
             
             <div className="counter-box" key={index}>
-                <h2>{icon}</h2>
+                {/* <h2>{icon}</h2> */}
                 <h3>{title}</h3>
 
                     <CountUp

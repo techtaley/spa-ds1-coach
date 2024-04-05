@@ -2,6 +2,7 @@ import { NavLink, Link } from 'react-router-dom';
 import logoImg from '/assets/organic-6074992_640.png';
 import EmailSubscribe from './../../components/subscriber/EmailSubscribeForm'
 import './footer.css';
+import Nav from '../nav/Nav';
 import EmailSubscribeForm from './../../components/subscriber/EmailSubscribeForm';
 //import Box from './../../components/hero/Box';
 
@@ -15,22 +16,29 @@ export default function Footer() {
           <div className="column_div">
             
             <div className="row_div">
-              <Link to="/"><img src={logoImg} /></Link>
-              <Link to="/" className="logo-link"><h1>CoachMe</h1></Link>    
+              {/* <Link to="/"><img src={logoImg} /></Link>
+              <Link to="/" className="logo-link"><h1>CoachMe</h1></Link> */}
+              <a href="#home" ><img src={logoImg} /></a>
+              <a href="#home" className="logo-link"><h1>CoachMe</h1></a>    
             </div>
 
             <div className="row_div">
-              <Link className="footer-link" to="/about-us">about</Link>
+              {/* <Link className="footer-link" to="/about-us">about</Link>
               <Link className="footer-link" to="/contact-us">contact</Link>
-              <Link className="footer-link" to="/our-programs">programs</Link>
-            </div>
+              <Link className="footer-link" to="/our-programs">programs</Link> 
+              */}
+
+              <a href="#services" className="footer-link">services</a>              
+              <a href="#about" className="footer-link">about</a>              
+              <a href="#contact" className="footer-link">contact</a>              
+                  
+            </div>              
           </div>        
       </div>  
 
       <div className="footer-div">
         <EmailSubscribeForm />
       </div>
-
 
         <div className="footer-div">
           <Link className="footer-link" to="/terms">terms</Link>

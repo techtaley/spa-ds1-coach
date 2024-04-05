@@ -406,6 +406,13 @@ img {
   border-radius: 5px;
   margin-bottom: 60px;
 }
+.multi-box-row .box h3 {
+  color: #0d6959;
+}
+.multi-box-row .box .desc {
+  color: #0d6959;
+  font-weight: bold;
+}
 .multi-box-row .box a.box-link {
   color: #bb8b10;
 }
@@ -435,14 +442,14 @@ img {
 }
 .multi-box-row .icons {
   font-size: 3rem;
-  color: #bb8b10;
+  color: #0d6959;
 }
 .multi-box-row.remove-margin {
   margin-bottom: 0px;
 }
 
 .contactborder {
-  border: 3px solid #bb8b10;
+  border: 3px solid #0d6959;
   border-radius: 5px;
   padding: 30px;
   margin: 0px;

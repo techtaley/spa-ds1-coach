@@ -1,147 +1,121 @@
-import { useState, useEffect } from "react";
-import ContactInput from "./ContactInput";
+import React, { useState, useRef } from 'react';
+//import emailjs from '@emailjs/browser';
+
 import { useNavigate } from "react-router-dom";
-import axiosInstance from "./../../../config";
-import { Helmet } from "react-helmet";
-import inputData from "./inputData.json";
 
 import "./../../styles/main/main.css";
 import "./css/contact.scss";
-import Box from "../../components/hero/Box";
+import Box from "../hero/Box";
 
-import { BsTelephoneInbound } from 'react-icons/Bs';
-import { MdOutlineEmail } from "react-icons/md";
-import { MdOutlineBusiness } from "react-icons/md";
-import LeftTitle from "../titles/LeftTitle";
+import { MdPhone, MdOutlineEmail, MdOutlineBusiness } from "react-icons/md";
 
-const contactData = [
-  // {
-  //   title: "Constact form",
-  //   desc: "Contact us today to schedule your complimentary consultation and discover how CoachMe can help you unlock your full potential and live your best life."
-  // },
-  //"card" [   
+const contactData = [ 
     {
       id: 1,
-      icon: <BsTelephoneInbound className="icon"/>,
+      icon: <MdPhone className="icon"/>,
       title: "Phone",
-      para: "737-984-2743",
+      desc: "737-984-2743",
     },
     {
       id: 2,
       icon: <MdOutlineEmail className="icon"/>,
       title: "Email",
-      para: "yourhealth@email.com",
+      desc: "yourhealth@email.com",
     },
     {
       id: 3,
       icon: <MdOutlineBusiness className="icon"/>,
       title: "Address",
-      para: "23 27th Street, New York City 21208",
+      desc: "23 27th Street, New York City 21208",
     }    
-  //]
 ]
 
-export default function Contact() {
+export default function Contact({box}){
   const navigate = useNavigate();
-  const [inputApi, setInputApi] = useState(inputData);
-  const [message, setMessage] = useState("");
-  const [formResponses, setFormResponses] = useState({
-    website: "",
-    fullname: "",
-    // fname: "",
-    // lname: "",
-    cname: "",
-    // cellnumber: "",
-    email: "",
-    services: "",
-    features: [],
-  });
 
-  const {
-    website,
-    fullname,
-    // fname,
-    // lname,
-    cname,
-    // cellnumber,
-    email,
-    services,
-    features,
-  } = formResponses;
+    const [ name, getName ] = useState('');   
+    const [ email, getEmail ] = useState('');    
+    const [ message, getMessage ] = useState('');
+    const [ sendMessage, setSendMessage ] = useState('');
+	  const [ website, getWebsite] = useState('');
+	  const [ confirm, setConfirm ] = useState(false);
+    const [ redirect, setRedirect ] = useState(false); 
+	  const [ error, setError ] = useState(false); 
+    const [ focused, setFocused ] = useState(false);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const handleChange = (e) => {
-    setFormResponses({
-      ...formResponses,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (website) {
-      setMessage("Something is wrong...");
-      navigate("/");
-      return false;
-
-      setFormResponses({
-        website: "",
-        fullname: "",
-        // fname: "",
-        // lname: "",
-        cname: "",
-        // cellnumber: "",
-        email: "",
-      });
+    const handleFocus = e => {
+      setFocused(true)
     }
 
-    try {
-      const res = await axiosInstance.post("/contact", {
-        //2. BE connects to api & sends form responses
-        fullname,
-        // fname,
-        // lname,
-        cname,
-        //cellnumber,
-        email,
-      });
+	  //const form = useRef(); 
 
-      setMessage(`${fullname}, your request was successfully submitted.`);
+    const sendEmail = (e) => {
+        e.preventDefault();
+        getName('');    
+        getEmail('');    
+        getMessage('');
+
+		//error handling
+    if (website) {
+			setSendMessage('Something is wrong...');
+			setError(true);
+			setConfirm(false);
+
+			getName('');    
+			getEmail('');    
+			getMessage('');
+		}	
+
+    //otherwise, if all is good send data to emailjs/browser
+    try {
+      setError(false);
+      setConfirm(true);
+
+      setSendMessage(`${name}, your request was successfully submitted.`);
+
+		// const serviceId = '';
+		// const templateId = '';
+		// const publicKey = '';
+
+		// const templateParams = {
+		// 	recipient_name: name,
+		// 	recipient_email: email,
+		// 	sender_name: 'Tech Taley',
+		// 	message: message,
+		// }
+
+		// emailjs.send(serviceId, templateId, templateParams, publicKey)
+		// .then(response => {
+		// 	console.log('SUCCESS!', response.status, response.text);
+		// 	getName('');    
+		// 	getEmail('');    
+		// 	getMessage('');
+		// 	//resetState() 
+		// })
+		// .catch(error => {
+		// 	setError(true);
+		// 	console.log('FAILED...', error.text);
+		// })			
+		
+  		e.target.reset();
 
       setTimeout(() => {
         navigate("/");
       }, 2000);
-
-      return await res.data;
-      //console.log({ Requests: res.json() });
+      
     } catch (error) {
-      setMessage("Please try again.");
+      getMessage("Please try again.");
       return error.message;
-
-      setFormResponses({
-        website: "",
-        fullname: "",
-        // fname: "",
-        // lname: "",
-        cname: "",
-        //cellnumber: "",
-        email: "",
-        message: "",
-      });
     }
   };
-
-  return (
+	
+	return (
     <section>
-      {/* <LeftTitle data={contactData} /> */}
       <h2 className="center darkfont">Contact Form</h2>
 
       <div className="hero left-hero">
-        {/* <Helmet>
+        {/* 
+        <Helmet>
         <meta name="description" content="" />
         <meta name="author" content="Expansive Designs" />
         <meta
@@ -151,18 +125,20 @@ export default function Contact() {
         <link rel="canonical" href="https://expansivedesigns.com/request" />
 
         <title>Request | Website request form - Expansive Designs</title>
-      </Helmet> */}
+        </Helmet> 
+        */}
 
         {/* <img
           className="hero-img"
           src="https://place-hold.it/500x500/666/fff/000?text=Google Map"
-        /> */}
+        /> 
+        */}
 
         <div className="googlemap">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.944068093808!2d-73.85479771610443!3d40.719247763424846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25e23c2af73c5%3A0xa674d16f0ab9faec!2sForest%20Hills%20Stadium!5e0!3m2!1sen!2sus!4v1699669843438!5m2!1sen!2sus"
             width="400"
-            height="500"
+            height="400"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -183,49 +159,79 @@ export default function Contact() {
             <h1 className="request-above-div-title">
               Contact Information
             </h1>
-            
 
-            <form
-              className="request-above-div-form"
-              name="request"
-              id="registration"
-              method="post"
-              onSubmit={handleSubmit}
-            >
-              <div className="left-form">
-                <fieldset>
-                  {/* 
-                  <legend>
-                    <h2>Contact Information</h2>
-                  </legend> 
-                */}
+				<form className="request-above-div-form"
+          //ref={form}
+          name="request"
+          id="registration"
+          method="post"          
+          onSubmit={sendEmail}
+				>
+        <div className="left-form">
 
-                  {inputApi.data.map((e, index) => (
-                    <ContactInput
-                      e={e}
-                      index={index}
-                      value={formResponses[e.fullname]} //gets the value that was saved to name on form submit
-                      handleChange={handleChange}
-                    />
-                  ))}
-                </fieldset>
+					<input className="form-input no-show"
+						type="text"
+						name="website"
+						maxlength="30"
+            placeholder="enter text"
+						onChange={e => {
+							getWebsite(e.target.value)
+						}} 
+            //pattern="[^s]*"                      
+						value={website}
+					/>
 
-                <button
-                  type="submit"
-                  name="formsubmit"
-                  id="formsubmit"
-                  value="submit"
-                  accessKey="n"
-                  tabIndex="19"
-                  className="formBtn contactbtn" 
-                >
-                  Submit
-                </button>
+          <input className="form-input"
+						type="text"
+						name="name"
+						placeholder="Full name"
+						maxlength="30"
+            //pattern="^[A-Za-z]{5,30}$"
+            required="true"
+            // errorMsg="full name should be 5-30 characters that do not include special characters!"
+						onChange={e => {
+							getName(e.target.value)
+						}}                        
+						value={name}
+					/>
+											
+          <input className="form-input"
+						type="text"
+						name="email"
+						placeholder="youremail@email.com"
+						maxlength="40"
+            required="true"
+            maxLength="90"
+            //pattern="^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+.)+[A-Za-z]+$"
+            // errorMsg="Please use the correct email@email.com format."
+						onChange={e => {
+							getEmail(e.target.value)
+						}}                        
+						value={email}
+					/>	
 
-                {/* <p className="message">{message}</p>  */}
-                <span className="form-error-msg message">{message}</span>
-              </div>
-            </form>
+          <input className="form-input"
+						type="text"
+						name="message"
+						placeholder="Message"
+						maxlength="40"
+            //pattern="^[A-Za-z]{0,200}$"
+            required="false"
+						onChange={e => {
+							getMessage(e.target.value)
+						}}                        
+						value={message}
+					/>
+
+					<input
+						className='formBtn'
+						type="submit"
+						value="Send"
+					/>		
+
+					{confirm && <span> {sendMessage}</span>}					
+          </div>
+          </form>  
           </div>
         </div>        
       </div>
@@ -235,6 +241,6 @@ export default function Contact() {
           <Box data={item} />
         )}
       </div>
-    </section>
-  );
-}
+    </section>			
+	)
+}	

@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  height: 500px;
+  height: 400px;
   width: 400px;
   border-radius: 5px;
 }
@@ -28,24 +28,25 @@
 .contact-form .request-above-div .request-above-div-form {
   width: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin: 0;
   border-radius: 3px;
 }
 .contact-form .request-above-div .request-above-div-form .left-form {
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 300px;
   margin: 2%;
 }
-.contact-form .request-above-div .request-above-div-form .left-form fieldset {
-  border: none;
-}
-.contact-form .request-above-div .request-above-div-form .left-form fieldset .form-label {
+.contact-form .request-above-div .request-above-div-form .left-form .form-label {
   margin-top: 5%;
 }
-.contact-form .request-above-div .request-above-div-form .left-form fieldset .form-input {
-  width: 300px;
+.contact-form .request-above-div .request-above-div-form .left-form .form-input {
   font-size: 1.563rem;
   height: 40px;
   margin: 8px 0;
@@ -53,17 +54,17 @@
   padding-left: 10px;
   border: 1px solid #999;
 }
-.contact-form .request-above-div .request-above-div-form .left-form fieldset .no-show {
+.contact-form .request-above-div .request-above-div-form .left-form .no-show {
   display: none;
 }
-.contact-form .request-above-div .request-above-div-form .left-form fieldset .form-input-radio {
+.contact-form .request-above-div .request-above-div-form .left-form .form-input-radio {
   margin-left: 10%;
 }
-.contact-form .request-above-div .request-above-div-form .left-form fieldset span.form-error-msg {
+.contact-form .request-above-div .request-above-div-form .left-form span.form-error-msg {
   display: none;
   color: red;
 }
-.contact-form .request-above-div .request-above-div-form .left-form fieldset input:invalid[focused=true] ~ span {
+.contact-form .request-above-div .request-above-div-form .left-form input:invalid[focused=true] ~ span {
   display: block;
 }
 .contact-form .request-above-div .request-above-div-form .formBtn {
@@ -72,13 +73,12 @@
   display: block;
   margin: 3% auto;
   align-items: center;
-  background-color: #0d6959;
-  border-color: #0d6959;
+  background-color: #bb8b10;
+  border-color: #bb8b10;
   color: #fefefe;
   border-radius: 3px;
   width: 200px;
   padding: 5px;
-  box-shadow: 0.5px 0.5px 0.5px #333;
   cursor: pointer;
 }
 .contact-form .request-above-div .request-above-div-form .contactbtn {

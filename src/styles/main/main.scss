@@ -451,6 +451,15 @@ img {
         border-radius: 5px;
         margin-bottom: 60px;
 
+        h3 {
+            color: $accent-dk;
+        }
+
+        .desc {
+            color: $accent-dk;
+            font-weight: bold;
+        }
+
         a.box-link {
             color: $accent-lt;
         }  
@@ -488,7 +497,7 @@ img {
 
     .icons {
         font-size: 3rem;
-        color: $accent-lt;
+        color: $accent-dk;
     }
 
     &.remove-margin {
@@ -497,7 +506,7 @@ img {
 }
 
 .contactborder {
-    border: 3px solid $accent-lt; 
+    border: 3px solid $accent-dk; 
     border-radius: 5px; 
     padding: 30px; 
     margin: 0px;

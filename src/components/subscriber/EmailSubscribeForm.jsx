@@ -45,15 +45,15 @@ export default function EmailSubscribeForm({ onValidated }) {
       return false;
     }
 
-    try {
-      //MailChimpsubscribe - use onValidated() function to validate data in MailChimp
-      email &&
-        fname &&
-        //email.indexOf("@") > -1 &&
-        onValidated({
-          EMAIL: email,
-          MERGE1: fname,
-        });
+    try {      
+      // //MailChimpsubscribe - use onValidated() function to validate data in MailChimp
+      // email &&
+      //   fname &&
+      //   //email.indexOf("@") > -1 &&
+      //   onValidated({
+      //     EMAIL: email,
+      //     MERGE1: fname,
+      //   });
 
       //   //2. BE connects to api & sends form responses
       // const res = await axiosInstance.post('/subscribers', {
@@ -61,7 +61,7 @@ export default function EmailSubscribeForm({ onValidated }) {
       //   email,
       // });
 
-      setMessage(`Hi ${fname}, thanks for subscribing!`);
+      setMessage(`${fname}, Welcome to the CoachMe family!`);
 
       setTimeout(() => {
         navigate('/');
@@ -74,8 +74,9 @@ export default function EmailSubscribeForm({ onValidated }) {
         email: '',
       });
 
-      return await res.data;
-      console.log({ Subscribers: res.json() });
+      //if sending subscribers to a database
+      //return await res.data;
+      //console.log({ Subscribers: res.json() });
     } catch (error) {
       setMessage('Please try again.');
 
@@ -103,6 +104,9 @@ export default function EmailSubscribeForm({ onValidated }) {
           id="subscriber"
           onSubmit={handleSubmit}
         >
+
+          <span className="form-error-msg message">{message}</span>
+
           <fieldset>
             <legend tabIndex="0">
               <h2>Subscribe!</h2>
@@ -127,8 +131,6 @@ export default function EmailSubscribeForm({ onValidated }) {
           >
             Submit
           </button>
-
-          <span className="form-error-msg message">{message}</span>
         </form>
         <br />
       </div>

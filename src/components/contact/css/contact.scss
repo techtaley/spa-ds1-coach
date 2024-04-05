@@ -1,11 +1,11 @@
 @import './../../../styles/variables/variables.scss';
 
+
 .contact-form {
     @include flexdisplay(column, center, center);  
-    height: 500px;
+    height: 400px;
     width: 400px;
     border-radius: 5px;
-
 
     .request-above-div { 
         margin: 7% 0 2% 0;    
@@ -30,16 +30,19 @@
 
         .request-above-div-form {
             width: auto; 
-            @include flexdisplay(row, center, flex-start); 
+            @include flexdisplay(column, center, flex-start); 
             border-radius: 3px;
             //background-color: $offwhitecolor;
 
             .left-form {
-                width: 400px;
+                @include flexdisplay(column, center, center);
+
+                width: 300px;
                 margin: 2%;                
 
-                fieldset {
-                    border: none;   
+                // fieldset {
+                //     @include flexdisplay(column, center, center);
+                //     border: none;   
                     
                     label{}
 
@@ -50,7 +53,7 @@
                     }
 
                     .form-input {
-                        width: 300px;
+                        //width: 300px;
                         font-size: $subheading;
                         height: 40px;
                         margin: 8px 0;
@@ -75,7 +78,7 @@
                     input:invalid[focused="true"] ~ span {
                         display: block; 
                     }
-                } 
+                //} 
             }      
 
             .formBtn {
@@ -84,13 +87,13 @@
                 display: block;  //need to block to center - buttons, img, input are inline by default 
                 margin: 3% auto;
                 align-items: center;   
-                background-color: $accent-dk;
-                border-color: $accent-dk;
+                background-color: $accent-lt;
+                border-color: $accent-lt;
                 color: $light-lt;
                 border-radius: 3px;
                 width: 200px;
                 padding: 5px;
-                box-shadow: .5px .5px .5px #333;  
+                //box-shadow: .5px .5px .5px #333;  
                 cursor: pointer;                            
             }  
 

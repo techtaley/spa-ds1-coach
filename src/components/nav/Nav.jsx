@@ -16,21 +16,22 @@ export default function Nav() {
 
   const menu = [
     {
-      id: "1",
-      title: "About",
-      link: "about",
-      className: "",
-    },
-    {
-      id: "2",
+      id: "0",
       title: "Services",
       link: "services",
       className: "",
     },
     {
+      id: "1",
+      title: "About",
+      link: "about",
+      className: "",
+    },
+
+    {
       id: "3",
       title: "Contact",
-      link: "contact-us",
+      link: "contact",
       className: "",
     }
   ];
@@ -40,10 +41,12 @@ export default function Nav() {
       <div className="nav-div">
 
         <div className="nav-logo">
-          <Link to="/">
-            <img src={logoImg} alt="Coach logo" />
-          </Link>
-          <Link className="logo-text" to="/">CoachMe</Link>
+          {/* <Link to="/"><img src={logoImg} alt="Coach logo" /></Link>
+          <Link className="logo-text" to="/">CoachMe</Link> */}
+
+          <a href="#home" ><img src={logoImg} alt="Coach logo" /></a>
+          <a href="#home" className="logo-text"><h1>CoachMe</h1></a>            
+
         </div>
 
         <FiMenu
@@ -54,9 +57,12 @@ export default function Nav() {
 
       <div className={`nav-links ${menuToggle && "show"}`}>
           {menu.map((item) => (
-              <NavLink className="nav-link" to={`/${item.link}`}>
+              // <NavLink className="nav-link" to={`/${item.link}`}>
+              //   {item.title}
+              // </NavLink>
+              <a href={`#${item.link}`} className="nav-link">
                 {item.title}
-              </NavLink>
+              </a>              
           ))}
       
       </div>

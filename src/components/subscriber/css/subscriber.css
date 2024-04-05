@@ -16,7 +16,7 @@
   text-align: center;
   font-size: 1.875rem;
   font-weight: bold;
-  color: rgb(187, 139, 16);
+  color: #bb8b10;
   text-shadow: 0.5px 0.5px 0.5px #333;
 }
 .subscriber-section .subscriber-above-div .subscriber-above-div-form {
@@ -51,7 +51,7 @@
 .subscriber-section .subscriber-above-div .subscriber-above-div-form span.message {
   display: block;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1;
 }
 .subscriber-section .subscriber-above-div .subscriber-above-div-form .formBtn {
   font-size: 1.25rem;
@@ -59,9 +59,9 @@
   display: block;
   margin: 3% auto;
   align-items: center;
-  background-color: white;
-  border-color: white;
-  color: #103f22;
+  background-color: #fefefe;
+  border-color: #fefefe;
+  color: #666;
   border-radius: 5px;
 }
 .subscriber-section .subscriber-above-div .subscriber-above-div-form .formBtn:active {
@@ -95,8 +95,8 @@
 
 .component-card {
   width: 250px;
-  border: 1px solid #103f22;
-  box-shadow: 10px 5px 5px #103f22;
+  border: 1px solid #666;
+  box-shadow: 10px 5px 5px #666;
   border-radius: 5%;
   margin: 20px;
   padding: 1%;
