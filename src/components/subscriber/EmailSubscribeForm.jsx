@@ -91,7 +91,7 @@ export default function EmailSubscribeForm({ onValidated }) {
       });
 
       return error.message;
-      console.log(error.message);
+      //console.log(error.message);
     }
   };
 

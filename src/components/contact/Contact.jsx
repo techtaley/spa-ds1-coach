@@ -80,7 +80,7 @@ export default function Contact({box}){
 		// const templateParams = {
 		// 	recipient_name: name,
 		// 	recipient_email: email,
-		// 	sender_name: 'Tech Taley',
+		// 	sender_name: 'CoachMe',
 		// 	message: message,
 		// }
 
@@ -97,14 +97,20 @@ export default function Contact({box}){
 		// 	console.log('FAILED...', error.text);
 		// })			
 		
-  		e.target.reset();
-
+  		//e.target.reset();
       setTimeout(() => {
         navigate("/");
+        setSendMessage('');
       }, 2000);
       
     } catch (error) {
       getMessage("Please try again.");
+
+      setTimeout(() => {
+        navigate("/");
+        setSendMessage('');
+      }, 2000);
+
       return error.message;
     }
   };
@@ -114,25 +120,19 @@ export default function Contact({box}){
       <h2 className="center darkfont">Contact Form</h2>
 
       <div className="hero left-hero">
-        {/* 
-        <Helmet>
+        
+        {/* <Helmet>
         <meta name="description" content="" />
-        <meta name="author" content="Expansive Designs" />
+        <meta name="author" content="CoachMe" />
         <meta
           name="keywords"
-          content="Submit a request for to start working with Expansive Designs"
+          content="Submit a request to start working with CoachMe"
         />
-        <link rel="canonical" href="https://expansivedesigns.com/request" />
+        <link rel="canonical" href="https://spa-ds1-coachme.com" />
 
-        <title>Request | Website request form - Expansive Designs</title>
-        </Helmet> 
-        */}
-
-        {/* <img
-          className="hero-img"
-          src="https://place-hold.it/500x500/666/fff/000?text=Google Map"
-        /> 
-        */}
+        <title>Contact | Contact form - CoachMe</title>
+        </Helmet>  */}
+       
 
         <div className="googlemap">
           <iframe
@@ -144,14 +144,6 @@ export default function Contact({box}){
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-
-        {/* 
-        <div className="column-div-left">
-        <p>Right hero</p>
-        <h2>Ultricies tristique nulla aliquet enim tortor at auctor urna. </h2>
-        <Link className="bold">Read more</Link>
-        </div> 
-      */}
 
         <div className="contact-form center nobkg">
           {/* <section className="request-section" > */}
