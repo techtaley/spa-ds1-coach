@@ -14,7 +14,7 @@ export default function MultiBoxHero({data, index}) {
         {/* {icon} */}
         <h2>{title}</h2>
         <p>{desc}</p>
-        <Link className="bold">{btn}</Link>
+        <Link className="box-link">{btn}</Link>
       </div>
   );
 }

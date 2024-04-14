@@ -23,6 +23,10 @@ footer {
             .column_div {
                 @include flexdisplay(column, flex-start, flex-start);  
                 gap: 20px;
+
+                .row_div {
+                    width: 100%;
+                }
             }
         }
            

@@ -11,7 +11,7 @@ export default function Box({data}) {
       <p className="centeralign desc ">
         {desc}
       </p>
-      <Link className="bold box-link">{btn}</Link>
+      <Link className="bold">{btn}</Link>
     </div>
   );
 }

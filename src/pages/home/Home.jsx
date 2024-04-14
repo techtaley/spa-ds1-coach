@@ -73,21 +73,21 @@ const impactData = [
     title: "Personal Coaching",
     desc: "Our certified personal coaches specialize in helping you identify your strengths and develop a personalized roadmap for success.",
     bkg: "nobkg",
-    btn: "BUILD A ROADMAP"
+    btn: "START BUILDING"
   },
   {
     // icon: <HiOutlineUserGroup className="icons" />,
     title: "Career Coaching",
     desc: "Whether you're navigating a career transition, seeking to advance in your current job, or exploring new opportunities, our career coaches are here to help.",
     bkg: "nobkg",
-    btn: "EXPLORE A PATH"
+    btn: "START EXPLORING"
   },
   {
     // icon: <PiHandHeartBold className="icons" />,
     title: "Wellness Coaching",
     desc: "Our health and wellness coaches work with you to create sustainable habits, set achievable health goals, and overcome obstacles to living your best life. ",
     bkg: "nobkg",
-    btn: "SET A GOAL"
+    btn: "START LIVING"
   },  
 ]
 

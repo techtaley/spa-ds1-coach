@@ -44,7 +44,7 @@
   gap: 30px;
   margin-right: 20px;
 }
-.nav .nav-links:link, .nav .nav-links :visited, .nav .nav-links :hover, .nav .nav-links :active {
+.nav .nav-links a.nav-link:link, .nav .nav-links a.nav-link:visited, .nav .nav-links a.nav-link:hover, .nav .nav-links a.nav-link:active {
   color: #e2c479;
 }
 .nav .donateBtn {

@@ -458,14 +458,17 @@ img {
         .desc {
             color: $accent-dk;
             font-weight: bold;
-        }
-
-        a.box-link {
-            color: $accent-lt;
         }  
 
-        a:link.bold, a:visited.bold, a:hover.bold, a:active.bold   {
-            color: $accent-lt;
+        .box-link {
+            background-color: $accent-lt;
+            padding: 5%;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        a:link.box-link, a:visited.box-link, a:hover.box-link, a:active.bold   {
+            color: $light-lt;
         }
 
         &:hover {
@@ -774,7 +777,7 @@ img {
 }
    
 .googlemap {
-    margin-right: 20px;
+    margin: 0 20px;
     border-radius: 5px;
     border: 2px solid $accent-dk;
 }
@@ -833,7 +836,16 @@ img {
 }  
 
 
-@media only screen and (max-width: 992px) {    
+@media only screen and (max-width: 992px) {  
+
+    .sm-quote {
+        font-size: $heading;
+    }
+
+    .quote-text {
+        font-size: $heading;
+    }    
+    
     .left-hero, .right-hero {
         margin-bottom: 0px;
         flex-direction: column;
