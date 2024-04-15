@@ -1,10 +1,23 @@
 import { NavLink, Link } from 'react-router-dom';
 import logoImg from '/assets/organic-6074992_640.png';
-import EmailSubscribe from './../../components/subscriber/EmailSubscribeForm'
+//import EmailSubscribe from './../../components/subscriber/EmailSubscribeForm'
 import './footer.css';
 import Nav from '../nav/Nav';
-import EmailSubscribeForm from './../../components/subscriber/EmailSubscribeForm';
+//import EmailSubscribeForm from './../../components/subscriber/EmailSubscribeForm';
 //import Box from './../../components/hero/Box';
+
+import {
+  FacebookIcon,
+  FacebookMessengerIcon,
+  LinkedinIcon,
+  PinterestIcon,
+  RedditIcon,
+  TumblrIcon,
+  TwitterIcon,
+  WhatsappIcon,
+} from "react-share";
+
+import GoogleSubscribeForm from '../subscriber/GoogleSubscribeForm';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -30,19 +43,35 @@ export default function Footer() {
 
               <a href="#services" className="footer-link">services</a>              
               <a href="#about" className="footer-link">about</a>              
-              <a href="#contact" className="footer-link">contact</a>              
+              <a href="#contact" className="footer-link">contact</a>
+              <Link className="footer-link" to="/terms">terms</Link>
+              <Link className="footer-link" to="/privacy">privacy</Link>              
                   
             </div>              
           </div>        
       </div>  
 
       <div className="footer-div">
-        <EmailSubscribeForm />
+        <GoogleSubscribeForm />
+        {/* <GoogleSubscribe /> */}
+        {/* <EmailSubscribeForm /> */}
       </div>
 
         <div className="footer-div">
-          <Link className="footer-link" to="/terms">terms</Link>
-          <Link className="footer-link" to="/privacy">privacy</Link>
+        <h1>Connect with us!</h1>     
+
+        <div className="footer-social-media-links">
+          <FacebookIcon  size={32} round={true} />
+          <FacebookMessengerIcon size={32} round={true} />
+          <Link to="#" target="_blank">
+            <LinkedinIcon size={32} round={true} />
+          </Link>
+          <PinterestIcon size={32} round={true} />
+          <RedditIcon size={32} round={true} />
+          <TumblrIcon size={32} round={true} />
+          <TwitterIcon size={32} round={true} />
+          <WhatsappIcon size={32} round={true} />
+        </div> 
 
           {/* 
           <Link className="footer-link" to="/member">Become a member</Link>
@@ -53,14 +82,7 @@ export default function Footer() {
           <Link className="footer-link" to="/events">Events</Link> 
           */}
         </div>
-        {/* <div className="footer-div">
-          <a>LinkedIn</a>
-          <a>Facebook</a>
-          <a>Instagram</a>
-          <a>Discord</a>
-          <a>YouTube</a>                    
-        </div> 
-        */}
+
       </div>
 
       <div className="footer-bottom">

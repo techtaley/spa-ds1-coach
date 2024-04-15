@@ -35,6 +35,11 @@
   display: none;
   color: red;
 }
+.subscriber-section .subscriber-above-div .subscriber-above-div-form fieldset input {
+  border-radius: 3%;
+  font-size: 20px;
+  width: 100%;
+}
 .subscriber-section .subscriber-above-div .subscriber-above-div-form fieldset input:invalid[focused=true] ~ span {
   display: block;
 }

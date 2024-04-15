@@ -21,6 +21,9 @@
         .subscriber-above-div-form {
             width: auto; 
 
+
+
+
             fieldset { 
                 // //legend {}
                 .no-show { 
@@ -42,6 +45,11 @@
                     color: red;                  
                 }
     
+                input {
+                    border-radius: 3%;
+                    font-size: 20px;
+                    width: 100%;
+                }
                 //.form-input:invalid ~ span {
                 input:invalid[focused="true"] ~ span {
                     display: block; 

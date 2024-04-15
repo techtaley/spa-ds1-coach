@@ -12,11 +12,18 @@ footer {
         padding: 2% 15%;
 
         .footer-div {
-            @include flexdisplay(column, flex-start, flex-start);  
+            @include flexdisplay(column, flex-start, center);  
             font-size: $captionfont;
             gap: 5px;
 
             .footer-link {
+                color: $light-lt;
+            }
+
+            .footer-social-media-links {
+                @include flexdisplay(row, center, center);
+                width: 100%; 
+                gap: 10px; 
                 color: $light-lt;
             }
 
