@@ -263,6 +263,76 @@ img {
 
 }
 
+.instagram-title {
+    @include flexdisplay(column, center, center);
+    margin: 40px 0;
+  
+    .instagram-center {
+      text-align: center;
+      color: $accent-lt;
+      margin: 0;
+    }
+  
+    span {
+      color: $accent-dk;
+      margin: 0;
+    }
+  }
+  
+  .instafeed-div {
+    @include flexdisplay(row, center, center);
+    flex-wrap: wrap;
+    margin: 0 15%;
+    gap: 10px;
+  
+    .instafeed-card {
+      //gap: 10px;
+      margin-bottom: 0px;
+  
+      .instafeed-img {
+        width: 275px;
+        height: auto;
+  
+        &:hover {
+          opacity: 0.75;
+          transition: 0.3s ease;
+        }
+  
+        a.instafeed-link:link,
+        a.instafeed-link:visited,
+        a.instafeed-link:hover,
+        a.instafeed-link:active {
+          color: $dark-md;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  
+  .youtubefeed-div {
+    .youtubefeed-title {
+      @include flexdisplay(column, center, center);
+      margin: 40px 0;
+  
+      .youtubefeed-center {
+        text-align: center;
+        color: $accent-lt;
+        margin-bottom: 5px;
+      }
+  
+      span {
+        color: $accent-dk;
+        margin: 0;
+      }
+    }
+  
+    .youtubefeed-slider {
+      margin: 0 10%;
+  
+      .youtubefeed-card {
+      }
+    }
+  }
 
 .nobkg {
     color: $accent-lt;  

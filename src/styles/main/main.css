@@ -214,6 +214,73 @@ img {
   color: #bb8b10;
 }
 
+.instagram-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin: 40px 0;
+}
+.instagram-title .instagram-center {
+  text-align: center;
+  color: #bb8b10;
+  margin: 0;
+}
+.instagram-title span {
+  color: #0d6959;
+  margin: 0;
+}
+
+.instafeed-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  flex-wrap: wrap;
+  margin: 0 15%;
+  gap: 10px;
+}
+.instafeed-div .instafeed-card {
+  margin-bottom: 0px;
+}
+.instafeed-div .instafeed-card .instafeed-img {
+  width: 275px;
+  height: auto;
+}
+.instafeed-div .instafeed-card .instafeed-img:hover {
+  opacity: 0.75;
+  transition: 0.3s ease;
+}
+.instafeed-div .instafeed-card .instafeed-img a.instafeed-link:link,
+.instafeed-div .instafeed-card .instafeed-img a.instafeed-link:visited,
+.instafeed-div .instafeed-card .instafeed-img a.instafeed-link:hover,
+.instafeed-div .instafeed-card .instafeed-img a.instafeed-link:active {
+  color: #666;
+  cursor: pointer;
+}
+
+.youtubefeed-div .youtubefeed-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin: 40px 0;
+}
+.youtubefeed-div .youtubefeed-title .youtubefeed-center {
+  text-align: center;
+  color: #bb8b10;
+  margin-bottom: 5px;
+}
+.youtubefeed-div .youtubefeed-title span {
+  color: #0d6959;
+  margin: 0;
+}
+.youtubefeed-div .youtubefeed-slider {
+  margin: 0 10%;
+}
 .nobkg {
   color: #bb8b10;
   box-shadow: 5px 10px 10px #888888;

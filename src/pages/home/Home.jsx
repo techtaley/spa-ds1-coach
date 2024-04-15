@@ -21,6 +21,8 @@ import Banner from './../../components/hero/Banner'
 //import { bannerImg } from './../../assets/pexels-rfstudio-3810788.jpg'
 //import Instafeed from './../../components/instafeed/InstaFeed';
 import Contact from '../../components/contact/Contact';
+import InstagramFeeds from "../../components/instagramfeeds/InstagramFeeds";
+import YouTubeFeeds from "../../components/youtubefeed/YouTubeFeeds";
 
 const homeTitle = {
   title: "Home",
@@ -145,6 +147,10 @@ export default function Home() {
       {/* <RightTestimonial />   */}
 
       {/* <Instafeed /> */}
+
+      <InstagramFeeds />
+
+      <YouTubeFeeds />
 
       <div id="contact"></div>
       <Contact />
