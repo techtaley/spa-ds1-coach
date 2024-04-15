@@ -10,20 +10,17 @@ footer {
         @include flexdisplay(row, space-between, center);
         margin: 20px 0;
         padding: 2% 15%;
-
         .footer-div {
+            flex: 1;
             @include flexdisplay(column, flex-start, center);  
             font-size: $captionfont;
-            gap: 5px;
+            gap: 10px;
 
-            .footer-link {
-                color: $light-lt;
-            }
 
             .footer-social-media-links {
                 @include flexdisplay(row, center, center);
-                width: 100%; 
-                gap: 10px; 
+                width: 100%;
+                gap: 5px; 
                 color: $light-lt;
             }
 

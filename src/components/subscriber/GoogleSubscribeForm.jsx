@@ -47,7 +47,7 @@ export default function GoogleSubscribeForm({ onValidated }) {
 
     try {      
       
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzAkP8DpYgy9-SimIUNeTHCKhgHB51-l5hApVLhK63Xc-QJyadOv-gF8q3zNAPW1n04ZQ/exec'
+    const scriptURL = '<ACCESS URL>'
     const form = document.forms['submit-to-google-sheet']
     
     const res = await fetch(scriptURL, { method: 'POST', body: new FormData(form)})
