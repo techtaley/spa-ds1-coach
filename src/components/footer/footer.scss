@@ -10,6 +10,8 @@ footer {
         @include flexdisplay(row, space-between, center);
         margin: 20px 0;
         padding: 2% 15%;
+
+        
         .footer-div {
             flex: 1;
             @include flexdisplay(column, flex-start, center);  
@@ -30,6 +32,11 @@ footer {
 
                 .row_div {
                     width: 100%;
+                    margin-bottom: 20px;
+
+                    a.footer-link:link, a.footer-link:visited, a.footer-link:hover, a.footer-link:active {
+                        color: $light-lt;
+                    } 
                 }
             }
         }

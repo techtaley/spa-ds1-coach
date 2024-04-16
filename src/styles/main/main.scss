@@ -309,6 +309,8 @@ img {
     }
   }
   
+
+
   .youtubefeed-div {
     .youtubefeed-title {
       @include flexdisplay(column, center, center);
@@ -327,8 +329,29 @@ img {
     }
   
     .youtubefeed-slider {
-      margin: 0 10%;
+      margin: 0 8% 0 10%;
+
+      @media only screen and (max-width: 1366x){
+        .slick-track {
+          margin-left: 8%;
+          //border: 1px dotted green;
+        }
+        }
   
+      @media only screen and (max-width: 1024px){
+        .slick-track {
+          margin-left: 3%;
+          //border: 1px dotted blue;
+        }
+        }
+
+      @media only screen and (max-width: 926px){
+        .slick-track {
+          margin-left: 20%;
+          //border: 1px dotted red;
+        }
+        }
+
       .youtubefeed-card {
       }
     }

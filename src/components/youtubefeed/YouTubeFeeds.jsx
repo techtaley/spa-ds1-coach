@@ -47,22 +47,24 @@ export default function YouTubeFeeds() {
   const [posts, setPosts] = useState(temporaryData);
 
   const settings = {
-    dots: false,
+    dots: true,
     lazyLoad: true,
-    speed: 15000,
+    //speed: 3000,
     infinite: true,
-    centerPadding: '60px',
+    centerPadding: '20px',
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 15000,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
     cssEase: 'linear',
     responsive: [
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 1,
         },
       },      
       {
@@ -72,6 +74,13 @@ export default function YouTubeFeeds() {
           slidesToScroll: 2,
         },
       },
+      {
+        breakpoint: 926,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },      
       {
         breakpoint: 600,
         settings: {
