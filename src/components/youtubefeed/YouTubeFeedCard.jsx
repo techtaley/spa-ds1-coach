@@ -6,7 +6,7 @@ export default function YouTubeFeedCard({data}) {
   return (
     <div className='youtubefeed-card'>
       <iframe 
-        width="360" 
+        width="330" 
         height="200" 
         src={data.video} 
         title="YouTube video player" 

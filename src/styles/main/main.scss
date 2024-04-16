@@ -345,12 +345,30 @@ img {
         }
         }
 
-      @media only screen and (max-width: 926px){
+      @media only screen and (max-width: 768px){
         .slick-track {
-          margin-left: 20%;
-          //border: 1px dotted red;
+          margin-left: 23%;
+          //border: 3px dotted blue;
         }
         }
+
+        @media only screen and (max-width: 480px){
+                .slick-track {
+                  margin-left: 5%;
+                  //border: 3px dotted green;
+                }
+        }
+        
+        @media only screen and (max-width: 360px){
+            .youtubefeed-slider {
+                margin-bottom: 0px;
+
+                .slick-track {
+                    margin-left: 0;
+                    border: 3px dotted red;
+                }
+            }
+        }        
 
       .youtubefeed-card {
       }

@@ -43,7 +43,7 @@ footer .footer-top .footer-div .column_div {
 }
 footer .footer-top .footer-div .column_div .row_div {
   width: 100%;
-  margin-bottom: 20px;
+  gap: 5px;
 }
 footer .footer-top .footer-div .column_div .row_div a.footer-link:link, footer .footer-top .footer-div .column_div .row_div a.footer-link:visited, footer .footer-top .footer-div .column_div .row_div a.footer-link:hover, footer .footer-top .footer-div .column_div .row_div a.footer-link:active {
   color: #fefefe;
