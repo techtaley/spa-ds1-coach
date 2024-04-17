@@ -1,10 +1,10 @@
-footer {
+.footer {
   width: 100%;
   bottom: 0;
   background-color: #0d6959;
   color: #fefefe;
 }
-footer .footer-top {
+.footer .footer-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,7 +13,7 @@ footer .footer-top {
   margin: 20px 0;
   padding: 2% 15%;
 }
-footer .footer-top .footer-div {
+.footer .footer-top .footer-div {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@ footer .footer-top .footer-div {
   font-size: 0.85rem;
   gap: 10px;
 }
-footer .footer-top .footer-div .footer-social-media-links {
+.footer .footer-top .footer-div .footer-social-media-links {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -33,7 +33,7 @@ footer .footer-top .footer-div .footer-social-media-links {
   gap: 5px;
   color: #fefefe;
 }
-footer .footer-top .footer-div .column_div {
+.footer .footer-top .footer-div .column_div {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -41,14 +41,14 @@ footer .footer-top .footer-div .column_div {
   margin: 0;
   gap: 20px;
 }
-footer .footer-top .footer-div .column_div .row_div {
+.footer .footer-top .footer-div .column_div .row_div {
   width: 100%;
-  gap: 5px;
+  gap: 10px;
 }
-footer .footer-top .footer-div .column_div .row_div a.footer-link:link, footer .footer-top .footer-div .column_div .row_div a.footer-link:visited, footer .footer-top .footer-div .column_div .row_div a.footer-link:hover, footer .footer-top .footer-div .column_div .row_div a.footer-link:active {
+.footer .footer-top .footer-div .column_div .row_div a.footer-link:link, .footer .footer-top .footer-div .column_div .row_div a.footer-link:visited, .footer .footer-top .footer-div .column_div .row_div a.footer-link:hover, .footer .footer-top .footer-div .column_div .row_div a.footer-link:active {
   color: #fefefe;
 }
-footer .footer-top .nav-logo {
+.footer .footer-top .nav-logo {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -56,7 +56,7 @@ footer .footer-top .nav-logo {
   margin: 0;
   gap: 10px;
 }
-footer .footer-top .nav-logo .row_div {
+.footer .footer-top .nav-logo .row_div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -64,36 +64,43 @@ footer .footer-top .nav-logo .row_div {
   margin: 0;
   gap: 10px;
 }
-footer .footer-top .nav-logo .row_div a:link.logo-link, footer .footer-top .nav-logo .row_div a:hover.logo-link, footer .footer-top .nav-logo .row_div a:visited.logo-link, footer .footer-top .nav-logo .row_div a:active.logo-link {
+.footer .footer-top .nav-logo .row_div a:link.logo-link, .footer .footer-top .nav-logo .row_div a:hover.logo-link, .footer .footer-top .nav-logo .row_div a:visited.logo-link, .footer .footer-top .nav-logo .row_div a:active.logo-link {
   color: #fefefe;
 }
-footer .footer-top .nav-logo .footer_link {
+.footer .footer-top .nav-logo .footer_link {
   color: #fefefe;
   font-size: 0.85rem;
 }
-footer .footer-top .nav-logo h1 {
+.footer .footer-top .nav-logo h1 {
   color: #fefefe;
 }
-footer .footer-top .nav-logo img {
+.footer .footer-top .nav-logo img {
   width: 50px;
   height: 50px;
 }
-footer .footer-bottom {
+.footer .footer-bottom {
   background-color: #333333;
   padding: 15px 0;
   color: #fefefe;
   font-size: 0.85rem;
   text-align: center;
 }
-footer .footer-bottom a:link.footer-link, footer .footer-bottom a:hover.footer-link, footer .footer-bottom a:visited.footer-link, footer .footer-bottom a:active.footer-link {
+.footer .footer-bottom a:link.footer-link, .footer .footer-bottom a:hover.footer-link, .footer .footer-bottom a:visited.footer-link, .footer .footer-bottom a:active.footer-link {
   color: #fefefe;
 }
 
 @media only screen and (max-width: 992px) {
-  footer .footer-top .nav-logo {
+  .footer .footer-top .nav-logo {
     flex-direction: column;
   }
-  footer .footer-top .nav-logo .row_div {
+  .footer .footer-top .footer-div {
+    margin-bottom: 20px;
+  }
+  .footer .footer-top .footer-div .column_div {
     flex-direction: column;
+  }
+  .footer .footer-top .footer-div .column_div .row_div {
+    flex-direction: column;
+    align-items: center;
   }
 }/*# sourceMappingURL=footer.css.map */

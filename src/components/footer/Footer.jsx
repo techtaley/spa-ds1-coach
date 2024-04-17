@@ -23,7 +23,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer>
+    <footer className="footer">
       <div className="footer-top">          
         <div className="footer-div nav-logo">
           <div className="column_div">
