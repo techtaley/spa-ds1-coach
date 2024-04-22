@@ -1,9 +1,11 @@
+import React, {useState} from "react";
 import "./../../styles/main/main.css";
 import { Link } from "react-router-dom";
 import SmallMediumBox from "../../components/hero/SmallMediumRow";
 import LeftTitle from "../../components/titles/LeftTitle";
 import BlogExcerpt from "../../components/hero/LeftExcerpt";
 import Box from "../../components/hero/Box";
+import GoogleCoachingForm from "../../components/form/GoogleCoachingForm";
 
 // import { GiBookshelf } from 'react-icons/Gi';
 // import { PiHandHeartBold } from 'react-icons/Pi';
@@ -51,7 +53,7 @@ const aboutData = {
   desc: "Discover a holistic approach to well-being with expert guidance, transformative practices, and valuable resources."
 }
 
-const servicesData = {
+const servicesTitle = {
   title: "Services",
   desc: "Our team of coaches are highly trained professionals with years of experience helping individuals like you achieve success."
 }
@@ -69,27 +71,33 @@ const impactTitle = {
   desc: "Senectus et netus et malesuada fames ac. Fermentum iaculis eu non diam phasellus."
 } 
 
-const impactData = [
+const servicesData = [
   {
     // icon: <GiBookshelf className="icons" />,
+    id: 0,
     title: "Personal Coaching",
     desc: "Our certified personal coaches specialize in helping you identify your strengths and develop a personalized roadmap for success.",
     bkg: "nobkg",
-    btn: "START BUILDING"
+    btn: "START BUILDING",
+    link: "personal-coaching-form"
   },
   {
     // icon: <HiOutlineUserGroup className="icons" />,
+    id: 1,
     title: "Career Coaching",
     desc: "Whether you're navigating a career transition, seeking to advance in your current job, or exploring new opportunities, our career coaches are here to help.",
     bkg: "nobkg",
-    btn: "START EXPLORING"
+    btn: "START EXPLORING",
+    link: "career-coaching-form"
   },
   {
     // icon: <PiHandHeartBold className="icons" />,
+    id: 2,
     title: "Wellness Coaching",
     desc: "Our health and wellness coaches work with you to create sustainable habits, set achievable health goals, and overcome obstacles to living your best life. ",
     bkg: "nobkg",
-    btn: "START LIVING"
+    btn: "START LIVING",
+    link: "wellness-coaching-form"
   },  
 ]
 
@@ -115,6 +123,18 @@ const unicornData = {
 }
 
 export default function Home() {
+  const [openForm, setOpenForm] = useState(false);  
+  const [selected, setSelected] = useState("");
+
+  const handleClick = (e) => {
+    e.preventDefault();
+
+    setSelected(e.target.id);
+    console.log(selected)
+    
+    setOpenForm(!openForm)
+  }  
+  
   return (
     <div>
       <div id="home"></div>
@@ -122,23 +142,27 @@ export default function Home() {
 
       <QuoteHero data={quoteData} />
 
-      <LeftTitle data={servicesData}/>
+      <LeftTitle data={servicesTitle}/>
 
       <div id="services"></div>
       <div className="hero multi-box-row">
-        {impactData.map(impact =>         
-          <MultiBoxHero data={impact} />
+        {servicesData.map(service =>         
+          <MultiBoxHero data={service} openForm={openForm} setOpenForm={setOpenForm} setSelected={setSelected}/>
         )}
       </div>
+
+      <div className={`modal-content ${openForm ? "show" : "hide"}`}>
+            <GoogleCoachingForm setOpenForm={setOpenForm} selected={selected} />
+        </div>      
 
       <div id="about"></div>
       <LeftTitle data={aboutData}/>
 
-      <LeftHero data={whoData} />  
+      <LeftHero data={whoData} />
 
-      <RightHero data={whatData} />  
+      <RightHero data={whatData} />
 
-      <LeftHero data={unicornData} />    
+      <LeftHero data={unicornData} />  
 
       {/* <SmallMediumRow data={causesBox} /> */}
 

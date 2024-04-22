@@ -73,6 +73,7 @@ export default function Contact({box}){
 
       setSendMessage(`${name}, your request was successfully submitted.`);
 
+    //emailjs
 		// const serviceId = '';
 		// const templateId = '';
 		// const publicKey = '';

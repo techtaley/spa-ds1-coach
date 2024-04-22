@@ -619,6 +619,214 @@ img {
     }
 }
 
+.modal-content {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.65); /* Black w/ opacity */         
+
+    &.show {
+        display: block;
+    } 
+
+    &.hide {
+        display: none;
+    }
+    
+    .subscriber-section {
+        @include flexdisplay(column, center, center);
+        // border: 1px dotted white;
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 10%;
+
+            /* The Close Button */
+        .close-btn {
+            color: $light-lt;
+            float: right;
+            font-size: $headline;
+            font-weight: bold;
+            align-self: flex-end;
+            border: $dark-dk;
+        }
+        
+        .close-btn:hover,
+        .close-btn:focus {
+            color: $dark-dk;
+            text-decoration: none;
+            cursor: pointer;
+        } 
+    
+        .subscriber-above-div { 
+            margin: 0; 
+            height: auto;  
+            width: 330px;  
+            
+            .subscriber-above-div-title { 
+                text-align: center; 
+                font-size: $heading;  
+                font-weight: bold;
+                color: $accent-lt;
+                text-shadow: .5px .5px .5px #333;
+            }  
+    
+            .subscriber-above-div-form {    
+                fieldset { 
+                    @include flexdisplay(column, center, center);
+                    gap: 20px;
+                    border-radius: 3%;
+
+                    .no-show { 
+                        display: none;
+                    }
+    
+                    .form-label {
+                        margin-top: 0;
+                        display: none;
+                    }
+    
+                    legend {
+                        h2 {
+                            font-size: $subheading;
+                            color: $light-lt;
+
+                        }
+                    }     
+    
+                    span.form-error-msg {
+                        display: none; 
+                        color: $light-lt;                 
+                    }
+        
+                    input, .form-input {
+                        border-radius: 3%;
+                        font-size: $normalfont;
+                        width: 100%;
+                        padding: 3%;
+
+                        // .desc {
+                        //     color: red;
+                        //     // height: 20px;
+                        //     // padding: 5% 3%;
+                        //     // font-size: 10px;
+                        // }
+                    }
+                    //.form-input:invalid ~ span {
+                    input:invalid[focused="true"] ~ span {
+                        display: block; 
+                    }
+    
+                    .features-div {
+                        .features-select-div {
+                            width: 100%;
+                            position: relative;
+            
+                            option {
+                                font-size: $normalfont;
+                            }
+                            
+                            p {
+                                font-size: $captionfont;  
+                            }                                                        
+                        }
+                    }                       
+                }
+     
+                span.message {
+                    display:block;
+                    text-align:center;
+                    font-size: 1; 
+                    color: $light-lt;                 
+                }
+    
+                .formBtn {
+                    font-size:  $normalfont;
+                    padding: 1% 3%;
+                    display: block;  //need to block to center - buttons, img, input are inline by default 
+                    margin: 3% auto;
+                    align-items: center;   
+                    background-color: $light-lt;
+                    border-color: $light-lt;
+                    color: $dark-md;
+                    border-radius: 5px; 
+                }  
+                
+                .formBtn:active {
+                    border-radius: 20%;
+                    background-color: $dark-md;  
+                    border-color: $dark-md;                    
+                }
+            }        
+        }
+        
+    }
+} 
+
+
+
+// @media only screen and (max-width: 760px) {
+//     .subscriber-section {
+//         margin-top: 15%;
+//     }  
+// }
+
+// @media only screen and (max-width: 600px) {
+//     .subscriber-section {
+//         .subscriber-above-div {
+//             .subscriber-above-div-form {
+//                 width: 350px;  
+//             }
+//         }
+//     }            
+// }
+
+
+.form-header {
+    margin-bottom: 20px;
+}
+  
+.form-input {
+    min-height: 1.875rem; 
+    width: 100%;
+    text-align: center;
+    font-size: $normalfont;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+  
+.form-textarea {
+    min-height: 150px;  
+    width: 100%;
+    font-size: $normalfont;
+    margin-bottom: 5px;
+    border: 1px solid #333;
+}
+
+// button {
+//     margin: 0px 3px;
+//     border-radius: 3px;
+//     background-color: white;
+//     border:  1px solid white; 
+//     color: $darkslategrey;
+// }
+
+.component-card { 
+    width: 250px;
+    border: 1px solid $dark-md;
+    box-shadow: 10px 5px 5px $dark-md;
+    border-radius: 5%;
+    margin: 20px;
+    padding: 1%; 
+} 
+
 .contactborder {
     border: 3px solid $accent-dk; 
     border-radius: 5px; 

@@ -1,23 +1,24 @@
 import { useState } from 'react';
-import SubscribeInput from './SubscribeInput';
 import { useNavigate } from 'react-router-dom';
 //import axiosInstance from './../../../config';
-import inputData from './api/inputData';
+import inputData from './InputData';
+import FormInput from './FormInput';
 import './../../styles/main/main.css'; 
 
-import './css/subscriber.css';
-
-export default function GoogleSubscribeForm({ onValidated }) {
+export default function GoogleCoachingForm({ onValidated, setOpenForm, selected}) {
   const [apiData, setApiData] = useState(inputData);
   const navigate = useNavigate();
   const [message, setMessage] = useState('');
   const [formResponses, setFormResponses] = useState({
     website: '',
-    fname: '',
+    name: '',
     email: '', 
+    phone: '',
+    desc: '',
+    service: '',
   });
 
-  const { website, fname, email } = formResponses;
+  const { website, name, email, phone, desc, service } = formResponses;
 
   const handleChange = (e) => {
     setFormResponses({
@@ -38,8 +39,11 @@ export default function GoogleSubscribeForm({ onValidated }) {
 
       setFormResponses({
         website: '',
-        fname: '',
-        email: '',
+        name: '',
+        email: '', 
+        phone: '',
+        desc: '',
+        service: '',
       });
 
       return false;
@@ -47,14 +51,14 @@ export default function GoogleSubscribeForm({ onValidated }) {
 
     try {      
       
-    const scriptURL = '<ACCESS URL>'
-
-    const form = document.forms['submit-to-google-sheet']
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyPtrhfJn-w6blvhS-puk3Mt-uuAPP7T41ogSqxC5v5OhLTpqU6IlXCzMUN0yXpc4Dtng/exec';
+    
+    const form = document.forms['coaching-services'];
     
     const res = await fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     console.log("Success!", res)
 
-      setMessage(`${fname}, Welcome to the CoachMe family!`);
+      setMessage(`${name}, We look forward to partnering with you!`);
 
       setTimeout(() => {
         navigate('/');
@@ -63,8 +67,11 @@ export default function GoogleSubscribeForm({ onValidated }) {
 
       setFormResponses({
         website: '',
-        fname: '',
-        email: '',
+        name: '',
+        email: '', 
+        phone: '',
+        desc: '',
+        service: '',
       });
 
       //if sending subscribers to a database
@@ -79,24 +86,26 @@ export default function GoogleSubscribeForm({ onValidated }) {
 
       setFormResponses({
         website: '',
-        fname: '',
-        email: '',
+        name: '',
+        email: '', 
+        phone: '',
+        desc: '',
+        service: '',
       });
 
       return error.message;
-      //console.log(error.message);
     }
   };
 
   return (
     <section className="subscriber-section">
+      <span className="close-btn" onClick={e => setOpenForm(false)}>&times;</span>
+
       <div className="subscriber-above-div">
         <form
           className="subscriber-above-div-form"
-          //name="subscriber"
-          //id="subscriber"
-          name="submit-to-google-sheet"
-          id="submit-to-google-sheet"
+          name="coaching-services"
+          id="coaching-services"
           onSubmit={handleSubmit}
         >
 
@@ -104,14 +113,14 @@ export default function GoogleSubscribeForm({ onValidated }) {
 
           <fieldset>
             <legend tabIndex="0">
-              <h2>Subscribe!</h2>
+              <h2>{selected}</h2>
             </legend>
 
             {apiData.map((input, index) => (
-              <SubscribeInput
+              <FormInput
                 {...input}
                 index={index}
-                value={formResponses[input.name]} //gets the value of fname
+                value={input.name === "service" ? selected : formResponses[input.name]}  //gets the "value" entered into field by name
                 handleChange={handleChange}
               />
             ))}
