@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Link, useParams } from "react-router-dom";
 import "./../../styles/main/main.css";
-import GoogleCoachingForm from "../form/GoogleCoachingForm";
+import GoogleCoachingForm from "../form/GoogleForm";
 
 // import { HiUserGroup } from "react-icons/Hi";
 // import { FaHandsHelping } from "react-icons/Fa";

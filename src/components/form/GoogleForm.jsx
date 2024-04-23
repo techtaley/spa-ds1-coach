@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-//import axiosInstance from './../../../config';
 import inputData from './InputData';
 import FormInput from './FormInput';
 import './../../styles/main/main.css'; 
 
-export default function GoogleCoachingForm({ onValidated, setOpenForm, selected}) {
+export default function GoogleForm({ onValidated, setOpenForm, selected}) {
   const [apiData, setApiData] = useState(inputData);
   const navigate = useNavigate();
   const [message, setMessage] = useState('');

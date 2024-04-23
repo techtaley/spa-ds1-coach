@@ -17,20 +17,20 @@ export default function Nav() {
   const menu = [
     {
       id: "0",
-      title: "Services",
+      title: "services",
       link: "services",
       className: "",
     },
     {
       id: "1",
-      title: "About",
+      title: "about",
       link: "about",
       className: "",
     },
 
     {
       id: "3",
-      title: "Contact",
+      title: "contact",
       link: "contact",
       className: "",
     }

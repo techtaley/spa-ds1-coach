@@ -61,16 +61,31 @@ export default function Footer() {
         <h1>Connect with us!</h1>     
 
         <div className="footer-social-media-links">
-          <FacebookIcon  size={32} round={true} />
-          <FacebookMessengerIcon size={32} round={true} />
-          <Link to="#" target="_blank">
+          <Link to="https://www.facebook.com" target="_blank">
+            <FacebookIcon  size={32} round={true} />
+         </Link>     
+         <Link to="https://www.messenger.com/" target="_blank">
+            <FacebookMessengerIcon size={32} round={true} />
+          </Link>   
+          <Link to="https://linkedin.com" target="_blank">
             <LinkedinIcon size={32} round={true} />
           </Link>
-          <PinterestIcon size={32} round={true} />
-          <RedditIcon size={32} round={true} />
-          <TumblrIcon size={32} round={true} />
-          <TwitterIcon size={32} round={true} />
-          <WhatsappIcon size={32} round={true} />
+          <Link to="https://www.pinterest.com/" target="_blank">
+            <PinterestIcon size={32} round={true} />
+          </Link>  
+          <Link to="https://www.reddit.com/?rdt=33923" target="_blank">
+            <RedditIcon size={32} round={true} />
+          </Link>
+          <Link to="https://www.tumblr.com/" target="_blank">
+            <TumblrIcon size={32} round={true} />
+          </Link>
+          <Link to="https://twitter.com/?lang=en" target="_blank">
+            <TwitterIcon size={32} round={true} />
+           </Link>
+          <Link to="https://www.whatsapp.com/" target="_blank">
+            <WhatsappIcon size={32} round={true} />
+          </Link>    
+            
         </div> 
 
           {/* 
