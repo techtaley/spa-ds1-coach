@@ -61,7 +61,7 @@ const inputData = [
         required: true,
         rows: "4",
         maxLength: "200",
-        pattern: "^[A-Za-z ]{3,200}$",
+        pattern: "^[A-Za-z@:_- ]{3,200}$",
         errorMsg: "Please use the correct phone number format.",
       }, 
       {

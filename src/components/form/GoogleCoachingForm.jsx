@@ -51,8 +51,8 @@ export default function GoogleCoachingForm({ onValidated, setOpenForm, selected}
 
     try {      
       
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyPtrhfJn-w6blvhS-puk3Mt-uuAPP7T41ogSqxC5v5OhLTpqU6IlXCzMUN0yXpc4Dtng/exec';
-    
+    const scriptURL=import.meta.env.VITE_GOOGLE_ACCESS_TOKEN;
+
     const form = document.forms['coaching-services'];
     
     const res = await fetch(scriptURL, { method: 'POST', body: new FormData(form)})
