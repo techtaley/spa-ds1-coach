@@ -20,7 +20,8 @@ export default function MultiBoxHero({data, index, setOpenForm, openForm, setSel
 
   return (
     <>
-      <div className={`box ${bkg}`} key={id}>        <h2>{title}</h2>
+      <div className={`box ${bkg}`} key={id}>        
+        <h2>{title}</h2>
         <p>{desc}</p>
         <Link className="box-link" id={title} onClick={handleClick}>{btn}</Link>
       </div>

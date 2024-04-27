@@ -20,6 +20,8 @@ import Contact from "../../components/contact/Contact";
 import InstagramFeeds from "../../components/instagramfeeds/InstagramFeeds";
 import YouTubeFeeds from "../../components/youtubefeed/YouTubeFeeds";
 import data from "../../data/data.json";
+import { Helmet } from "react-helmet";
+
 
 export default function Home() {
   const [openForm, setOpenForm] = useState(false);
@@ -36,7 +38,17 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <>    
+      <Helmet>
+        <meta name="description" content={apiData.results.meta.desc}  />
+        <meta name="author" content="" />
+        <meta name="keywords" content={apiData.results.meta.keywords}  />              
+        <link rel="canonical" href="https://expansivedesigns.com" />
+
+        <title>{apiData.results.meta.title}</title>
+      </Helmet>  
+
+    <main>
       <div id="home"></div>
       <Banner data={apiData.results.bannerData} />
 
@@ -75,6 +87,7 @@ export default function Home() {
 
       <div id="contact"></div>
       <Contact />
-    </div>
+    </main>
+    </>    
   );
 }
