@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import { BallTriangle } from 'react-loader-spinner'
-import MainLayout from './components/layout/MainLayout';
+//import MainLayout from './components/layout/MainLayout';
 
-const Layout = lazy(() => import( './components/layout/MainLayout'));
+const MainLayout = lazy(() => import( './components/layout/MainLayout'));
 const Home = lazy(() => import( './pages/home/Home'));
 
 function App() {

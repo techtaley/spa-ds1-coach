@@ -3,8 +3,7 @@ import logoImg from '/assets/organic-6074992_640.png';
 //import EmailSubscribe from './../../components/subscriber/EmailSubscribeForm'
 import './footer.css';
 import Nav from '../nav/Nav';
-//import EmailSubscribeForm from './../../components/subscriber/EmailSubscribeForm';
-//import Box from './../../components/hero/Box';
+import SocialLinks from './SocialLinks';
 
 import {
   FacebookIcon,
@@ -36,14 +35,13 @@ export default function Footer() {
             </div>
 
             <div className="row_div">
-              {/* <Link className="footer-link" to="/about-us">about</Link>
+              <Link className="footer-link" to="/about-us">about</Link>
               <Link className="footer-link" to="/contact-us">contact</Link>
-              <Link className="footer-link" to="/our-programs">programs</Link> 
-              */}
+              <Link className="footer-link" to="/our-programs">programs</Link>              
 
-              <a href="#services" className="footer-link">services</a>              
+              {/* <a href="#services" className="footer-link">services</a>              
               <a href="#about" className="footer-link">about</a>              
-              <a href="#contact" className="footer-link">contact</a>
+              <a href="#contact" className="footer-link">contact</a> */}
               <Link className="footer-link" to="/terms">terms</Link>
               <Link className="footer-link" to="/privacy">privacy</Link>              
                   
@@ -60,34 +58,9 @@ export default function Footer() {
         <div className="footer-div">
         <h1>Connect with us!</h1>     
 
-        <div className="footer-social-media-links">
-          <Link to="https://www.facebook.com" target="_blank">
-            <FacebookIcon  size={32} round={true} />
-         </Link>     
-         <Link to="https://www.messenger.com/" target="_blank">
-            <FacebookMessengerIcon size={32} round={true} />
-          </Link>   
-          <Link to="https://linkedin.com" target="_blank">
-            <LinkedinIcon size={32} round={true} />
-          </Link>
-          <Link to="https://www.pinterest.com/" target="_blank">
-            <PinterestIcon size={32} round={true} />
-          </Link>  
-          <Link to="https://www.reddit.com/?rdt=33923" target="_blank">
-            <RedditIcon size={32} round={true} />
-          </Link>
-          <Link to="https://www.tumblr.com/" target="_blank">
-            <TumblrIcon size={32} round={true} />
-          </Link>
-          <Link to="https://twitter.com/?lang=en" target="_blank">
-            <TwitterIcon size={32} round={true} />
-           </Link>
-          <Link to="https://www.whatsapp.com/" target="_blank">
-            <WhatsappIcon size={32} round={true} />
-          </Link>    
-            
+        <div className="footer-social-media-links">                         
+              <SocialLinks />
         </div> 
-
           {/* 
           <Link className="footer-link" to="/member">Become a member</Link>
           <Link className="footer-link" to="/volunteer">Volunteer</Link>

@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from 'react-router-dom'
 
 export default function LeftHero({data}) {
-  const { title, desc, image, btn, link } = data;
+  const { title, desc, url, btn, link } = data;
 
   return (
 
@@ -10,7 +10,7 @@ export default function LeftHero({data}) {
       <div>
         <img
           className="hero-img"
-          src={`./../../assets/${image}`}
+          src={`./../../assets/${url}`}
         />
       </div>
 

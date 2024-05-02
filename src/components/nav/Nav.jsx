@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import logoImg from '/assets/organic-6074992_640.png';
 import { FiMenu } from 'react-icons/fi'
+import data from "../../data/data.json";
 
 import "./nav.css";
 
@@ -14,25 +15,22 @@ export default function Nav() {
     return () => clearTimeout(timer);
   }, [menuToggle]);
 
-  const menu = [
+  const nav = [
     {
       id: "0",
       title: "services",
       link: "services",
-      className: "",
     },
     {
       id: "1",
       title: "about",
       link: "about",
-      className: "",
     },
 
     {
       id: "3",
       title: "contact",
       link: "contact",
-      className: "",
     }
   ];
 
@@ -56,7 +54,7 @@ export default function Nav() {
       </div>
 
       <div className={`nav-links ${menuToggle && "show"}`}>
-          {menu.map((item) => (
+          {nav.map(item => (
               // <NavLink className="nav-link" to={`/${item.link}`}>
               //   {item.title}
               // </NavLink>

@@ -97,7 +97,7 @@ img {
 }
 
 .banner-div {
-    @include flexdisplay(row, center, center);
+    @include flexdisplay(column, center, center);
     // margin: 20px 0; 
     margin-bottom: 100px;
     // width: 100%;
@@ -109,6 +109,40 @@ img {
         width: 100%;
         //box-shadow: 50px 50px 50px 50px white inset;
         box-shadow: 20px 20px 20px 20px rgba(89, 70, 70, 0.25);
+    }
+
+    .banner-text {
+        position: absolute;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        left: 20px;
+        margin-top: 50px;
+        width: 40%;      
+        font-size: 1.75rem;
+        color: #f7f1f1;
+    }
+
+    @media screen and (max-width: 926px){
+        .banner-text {
+            width: 40%;      
+            font-size: 1.5rem;
+        }
+    } 
+
+    @media screen and (max-width: 768px){
+        .banner-text {
+            display: none;
+        }
+    }     
+
+    .banner-btn {
+        color: $light-lt;
+        background-color: $accent-lt;
+        padding: 2%;
+        font-size: $normalfont;
+        border-radius: 5%;
     }
 }
 

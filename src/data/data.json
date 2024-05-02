@@ -4,14 +4,36 @@
             "id": 0,
             "title": "CoachMe Services | Discover a holistic approach to well-being.",
             "desc": "CoachMe has a staff of trained professionals with years of experience helping individuals like you achieve success.",
-            "keywords": "Holistic approach, alternative medicine,  guidance, transformative practices"
+            "keywords": "CoachMe has a staff of trained professionals with years of experience helping individuals like you achieve success."
           },
+
+          "nav": [
+            {
+              "id": "0",
+              "title": "services",
+              "link": "services"
+            },
+            {
+              "id": "1",
+              "title": "about",
+              "link": "about"
+            },        
+            {
+              "id": "3",
+              "title": "contact",
+              "link": "contact"
+            }
+          ],          
           "homeTitle": {
             "title": "Home",
             "desc": "Ready to take the first step towards a happier, more fulfilling life?  Your journey to success starts here!"
           },          
           "bannerData": {
-            "image": "pexels-savanna-goldring-5184327.jpg"
+            "url": "pexels-savanna-goldring-5184327.jpg",
+            "alt": "image of a woman doing yoga",
+            "desc": "Take the first step towards a more fulfilling life.",
+            "link": "",
+            "btn": "LET'S TALK"
           },          
           "quoteData": {
             "quote": "Life isn't about waiting for the storm to pass...  It's about learning to dance in the rain.",
@@ -26,48 +48,105 @@
               "id": 0,
               "title": "Personal Coaching",
               "desc": "Our certified personal coaches specialize in helping you identify your strengths and develop a personalized roadmap for success.",
-              "bkg": "nobkg",
-              "btn": "REQUEST INFO",
+              "btn": "START BUILDING",
               "link": "personal-coaching-form"
             },
             {
               "id": 1,
               "title": "Career Coaching",
               "desc": "Whether you're navigating a career transition, seeking to advance in your current job, or exploring new opportunities, our career coaches are here to help.",
-              "bkg": "nobkg",
-              "btn": "REQUEST INFO",
+              "btn": "START GROWING",
               "link": "career-coaching-form"
             },
             {
               "id": 2,
               "title": "Wellness Coaching",
-              "desc": "Our health and wellness coaches work with you to create sustainable habits, set achievable health goals, and overcome obstacles to living your best life. ",
-              "bkg": "nobkg",
-              "btn": "REQUEST INFO",
+              "desc": "Our health and wellness coaches work with you to create sustainable habits, set achievable health goals, and overcome obstacles to living your best life.",
+              "btn": "START HEALING",
               "link": "wellness-coaching-form"
             }  
           ],          
-          "aboutData": {
+          "aboutTitle": {
             "title": "About",
             "desc": "Discover a holistic approach to well-being with expert guidance, transformative practices, and valuable resources."
           },          
           "whoData": {
-            "image": "pexels-katrin-bolovtsova-7113503.jpg",
+            "url": "pexels-katrin-bolovtsova-7113503.jpg",
+            "alt": "image of a woman doing yoga",
             "title": "Who we are",
             "desc": "At CoachMe, we believe that everyone has the potential to achieve their goals and fulfill their dreams.",
             "btn": ""
           },          
           "whatData": {
-            "image": "pexels-cottonbro-studio-5602461.jpg",
+            "url": "pexels-cottonbro-studio-5602461.jpg",
+            "alt": "image of yoga restreat room with bowls and incense",
             "title": "What we do",
             "desc": "Our mission is to empower individuals like you to unlock your full potential, overcome obstacles, and thrive in all aspects of life.",
             "btn": ""
           },          
           "unicornData": {
-            "image": "pexels-pixabay-355863.jpg",
+            "url": "pexels-pixabay-355863.jpg",
+            "alt": "image of yoga retreat showing stack of rocks",
             "title": "Our unicorn",
             "desc": "Our coaches took up a similar journey and are here to support you every step of the way.",
             "btn": ""
-          }                
+          },
+        "footer": [
+          {
+            "title": "services",   
+            "link": "service"
+          },
+          {
+            "title": "about",   
+            "link": "about"
+          },
+          {
+            "title": "contact",   
+            "link": "contact"
+          },
+          {
+            "title": "terms",   
+            "link": "terms"
+          },
+          {
+            "title": "privacy",   
+            "link": "privacy"
+          } 
+        ],
+        "social": [
+          {
+            "link": "https://www.facebook.com",
+            "icon": "FacebookIcon  size={32} round={true}"
+          },
+          {
+            "link": "https://www.messenger.com/",
+            "icon": "FacebookMessengerIcon size={32} round={true}"
+          },
+          {
+            "link": "https://linkedin.com",
+            "icon": "LinkedinIcon size={32} round={true}"
+          },
+          {
+            "link": "https://www.pinterest.com/",
+            "icon": "PinterestIcon size={32} round={true}"
+          },
+          {
+            "link": "https://www.reddit.com/?rdt=33923",
+            "icon": "RedditIcon size={32} round={true}"
+          },
+          {
+            "link": "https://www.tumblr.com/",
+            "icon": "TumblrIcon size={32} round={true}"
+          },
+          {
+            "link": "https://twitter.com/?lang=en",
+            "icon": "TwitterIcon size={32} round={true}"
+          },
+          {
+            "link": "https://www.whatsapp.com/",
+            "icon": "WhatsappIcon size={32} round={true}"
+          }                              
+        ]
+
     }
 }

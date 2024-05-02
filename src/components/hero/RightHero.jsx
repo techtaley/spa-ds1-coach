@@ -3,14 +3,14 @@ import {Link} from 'react-router-dom'
 import './../../styles/main/main.css'
 
 export default function RightHero({data}) {
-  const { image, title, desc, btn } = data;
+  const { url, title, desc, btn } = data;
   
   return (
     <div className="hero right-hero">
       <div>
         <img
           className="hero-img"
-          src={`./../../assets/${image}`}
+          src={`./../../assets/${url}`}
         />
       </div>
 

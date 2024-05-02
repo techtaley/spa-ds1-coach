@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./../../styles/main/main.css";
 import { Link } from "react-router-dom";
 import SmallMediumBox from "../../components/hero/SmallMediumRow";
@@ -22,11 +22,13 @@ import YouTubeFeeds from "../../components/youtubefeed/YouTubeFeeds";
 import data from "../../data/data.json";
 import { Helmet } from "react-helmet";
 
-
 export default function Home() {
   const [openForm, setOpenForm] = useState(false);
   const [selected, setSelected] = useState("");
-  const [apiData, setApiData] = useState(data);
+  const [apiData, setApiData] = useState();
+  //const [bannerData, setBannerData] = useState();
+  
+  const [loading, setLoading] = useState(false);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -37,28 +39,58 @@ export default function Home() {
     setOpenForm(!openForm);
   };
 
-  return (
-    <>    
-      <Helmet>
-        <meta name="description" content={apiData.results.meta.desc}  />
-        <meta name="author" content="" />
-        <meta name="keywords" content={apiData.results.meta.keywords}  />              
-        <link rel="canonical" href="https://expansivedesigns.com" />
 
-        <title>{apiData.results.meta.title}</title>
-      </Helmet>  
+  useEffect(() => {
+    const url=import.meta.env.VITE_STRAPI_URL;
+
+    const fetchData = async() => {
+      try {
+        setLoading(true);
+
+        const res = await fetch(url);      
+        const results = await res.json() 
+        setLoading(false);
+
+        setApiData(results.data.attributes);
+
+        console.log(apiData)
+
+      } catch(err) {
+        console.log(err.response)
+        //setLoading(false);
+      }
+    }
+
+    fetchData()
+  }, []);
+
+
+
+  return (
+    <>
+    {loading ? "loading" : 
+      <div>           
+          <Helmet>    
+            <meta name="description" content={apiData.meta.desc}  />
+            <meta name="author" content="" />
+            <meta name="keywords" content={apiData.meta.keywords}  />              
+            <link rel="canonical" href="https://expansivedesigns.com" />
+
+            <title>{apiData.meta.title}</title>
+          </Helmet>   
+     
 
     <main>
       <div id="home"></div>
-      <Banner data={apiData.results.bannerData} />
+       <Banner data={apiData.banner} />
 
-      <QuoteHero data={apiData.results.quoteData} />
+      <QuoteHero data={apiData.quote} />
 
-      <LeftTitle data={apiData.results.servicesTitle} />
+      <LeftTitle data={apiData.services.title.title} />
 
       <div id="services"></div>
       <div className="hero multi-box-row">
-        {apiData.results.servicesData.map((service) => (
+        {apiData.services.card.map((service) => (
           <MultiBoxHero
             data={service}
             openForm={openForm}
@@ -66,28 +98,32 @@ export default function Home() {
             setSelected={setSelected}
           />
         ))}
-      </div>
-
+      </div> 
+            
       <div className={`modal-content ${openForm ? "show" : "hide"}`}>
         <GoogleForm setOpenForm={setOpenForm} selected={selected} />
       </div>
 
       <div id="about"></div>
-      <LeftTitle data={apiData.results.aboutData} />
+      <LeftTitle data={apiData.about.title.title} />
 
-      <LeftHero data={apiData.results.whoData} />
+      <LeftHero data={apiData.about.card[0]} />
 
-      <RightHero data={apiData.results.whatData} />
+      <RightHero data={apiData.about.card[1]} />
 
-      <LeftHero data={apiData.results.unicornData} />
+      <LeftHero data={apiData.about.card[2]} />
 
       <InstagramFeeds />
 
       <YouTubeFeeds />
 
       <div id="contact"></div>
-      <Contact />
+      <Contact />       
+      
     </main>
+      </div>  
+  
+    }
     </>    
   );
 }

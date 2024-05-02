@@ -13,6 +13,7 @@ import LeftHero from '../hero/LeftHero'
 //import { MdEmojiPeople } from 'react-icons/md';
 //import { GiPayMoney } from 'react-icons/Gi';
 //import { RegisterModal } from '../registermodal/RegisterModal'
+import data from './../../data/data.json';
 
 // const countBanner = [
 //   {
@@ -60,11 +61,12 @@ import LeftHero from '../hero/LeftHero'
 //   cityyear: "New York City, 2022",
 // }
 
-export default function MainLayout({data}) {
+export default function MainLayout() {
+  
   return ( //outlet for all components in App.js
     <div className="layout">
 
-        <Nav />
+        <Nav data={data.results.social}/>
 
         {/* <Header /> */}
         <Outlet />
@@ -80,7 +82,7 @@ export default function MainLayout({data}) {
         </section> */}
 
         {/* <BlogEvent /> */}
-        <Footer />
+        <Footer footer={data.results.footer}/>
     </div>
   )
 }

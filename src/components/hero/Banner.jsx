@@ -1,14 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Banner({data}) {
-  const { image } = data;
+  const { url, desc, btn } = data;
 
   return (
     <div className="banner-div">
         <img
           className="hero-img"
-          src={`./../../assets/${image}`}
+          src={`./../../assets/${url}`}
         />
+        <div className="banner-text">
+          <h1>{desc}</h1>
+          <Link className="banner-btn" to="">{btn}</Link>
+        </div>
     </div>
   )
 }
