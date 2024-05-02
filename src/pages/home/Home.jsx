@@ -39,9 +39,9 @@ export default function Home() {
     setOpenForm(!openForm);
   };
 
-
   useEffect(() => {
     const url=import.meta.env.VITE_STRAPI_URL;
+    
 
     const fetchData = async() => {
       try {
@@ -53,7 +53,7 @@ export default function Home() {
 
         setApiData(results.data.attributes);
 
-        console.log(apiData)
+        console.log(apiData.banner)
 
       } catch(err) {
         console.log(err.response)
