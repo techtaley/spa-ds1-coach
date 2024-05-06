@@ -26,8 +26,7 @@ export default function Home() {
   const [openForm, setOpenForm] = useState(false);
   const [selected, setSelected] = useState("");
   const [apiData, setApiData] = useState();
-  //const [bannerData, setBannerData] = useState();
-  
+
   const [loading, setLoading] = useState(false);
 
   const handleClick = (e) => {
@@ -40,90 +39,86 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const url=import.meta.env.VITE_STRAPI_URL;
-    
+    const url = import.meta.env.VITE_STRAPI_URL;
 
-    const fetchData = async() => {
+    const fetchData = async () => {
       try {
         setLoading(true);
 
-        const res = await fetch(url);      
-        const results = await res.json() 
+        const res = await fetch(url);
+        const results = await res.json();
         setLoading(false);
 
         setApiData(results.data.attributes);
 
-        console.log(apiData.banner)
-
-      } catch(err) {
-        console.log(err.response)
+        console.log(apiData.banner);
+      } catch (err) {
+        console.log(err.response);
         //setLoading(false);
       }
-    }
+    };
 
-    fetchData()
+    fetchData();
   }, []);
-
-
 
   return (
     <>
-    {loading ? "loading" : 
-      <div>           
-          <Helmet>    
-            <meta name="description" content={apiData.meta.desc}  />
+      {loading ? (
+        "loading"
+      ) : (
+        <div>
+          <Helmet>
+            <meta name="description" content={apiData.meta.desc} />
             <meta name="author" content="" />
-            <meta name="keywords" content={apiData.meta.keywords}  />              
+            <meta name="keywords" content={apiData.meta.keywords} />
             <link rel="canonical" href="https://expansivedesigns.com" />
 
             <title>{apiData.meta.title}</title>
-          </Helmet>   
-     
+          </Helmet>
 
-    <main>
-      <div id="home"></div>
-       <Banner data={apiData.banner} />
+          <main>
+            <div id="home"></div>
 
-      <QuoteHero data={apiData.quote} />
+            <Banner data={apiData.banner} />
 
-      <LeftTitle data={apiData.services.title.title} />
+            <QuoteHero data={apiData.quote} />
 
-      <div id="services"></div>
-      <div className="hero multi-box-row">
-        {apiData.services.card.map((service) => (
-          <MultiBoxHero
-            data={service}
-            openForm={openForm}
-            setOpenForm={setOpenForm}
-            setSelected={setSelected}
-          />
-        ))}
-      </div> 
-            
-      <div className={`modal-content ${openForm ? "show" : "hide"}`}>
-        <GoogleForm setOpenForm={setOpenForm} selected={selected} />
-      </div>
+            <LeftTitle data={apiData.services.title.title} />
 
-      <div id="about"></div>
-      <LeftTitle data={apiData.about.title.title} />
+            <div id="services"></div>
+            <div className="hero multi-box-row">
+              {apiData.services.card.map((service) => (
+                <MultiBoxHero
+                  data={service}
+                  openForm={openForm}
+                  setOpenForm={setOpenForm}
+                  setSelected={setSelected}
+                />
+              ))}
+            </div>
 
-      <LeftHero data={apiData.about.card[0]} />
+            <div className={`modal-content ${openForm ? "show" : "hide"}`}>
+              <GoogleForm setOpenForm={setOpenForm} selected={selected} />
+            </div>
 
-      <RightHero data={apiData.about.card[1]} />
+            <div id="about"></div>
+            <LeftTitle data={apiData.about.title.title} />
 
-      <LeftHero data={apiData.about.card[2]} />
+            <LeftHero data={apiData.about.card[0]} />
 
-      <InstagramFeeds />
+            <RightHero data={apiData.about.card[1]} />
 
-      <YouTubeFeeds />
+            <LeftHero data={apiData.about.card[2]} />
 
-      <div id="contact"></div>
-      <Contact />       
-      
-    </main>
-      </div>  
-  
-    }
-    </>    
+            <InstagramFeeds />
+
+            <YouTubeFeeds />
+
+            <div id="contact"></div>
+            <Contact />
+          </main>
+        </div>
+      )}
+    </>
   );
 }
