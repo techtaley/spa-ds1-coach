@@ -17,7 +17,7 @@ export default function RightHero({data}) {
       <div className="hero column-div-right">
         <p>{title}</p>
         <h2>{desc}</h2>
-        {/* <Link className="darkbtn">{btn}</Link> */}
+        <Link className="bold">{btn}</Link>
       </div>
     </div>
   );

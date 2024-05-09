@@ -27,7 +27,7 @@ export default function Home() {
   const [selected, setSelected] = useState("");
   const [apiData, setApiData] = useState();
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -38,14 +38,16 @@ export default function Home() {
     setOpenForm(!openForm);
   };
 
+
   useEffect(() => {
-    const url = import.meta.env.VITE_STRAPI_URL;
+    //const url = import.meta.env.VITE_STRAPI_URL;
 
     const fetchData = async () => {
       try {
-        setLoading(true);
 
-        const res = await fetch(url);
+        //const res = await fetch(url);  //hides full url in .env file
+
+        const res = await fetch(`/api/results`);  //serving up api on port 4000 using proxy server
         const results = await res.json();
         setLoading(false);
 
@@ -54,7 +56,6 @@ export default function Home() {
         console.log(apiData.banner);
       } catch (err) {
         console.log(err.response);
-        //setLoading(false);
       }
     };
 
@@ -68,17 +69,15 @@ export default function Home() {
       ) : (
         <div>
           <Helmet>
-            <meta name="description" content={apiData.meta.desc} />
-            <meta name="author" content="" />
-            <meta name="keywords" content={apiData.meta.keywords} />
-            <link rel="canonical" href="https://expansivedesigns.com" />
+            <meta name="description" content="website templates" />
+            <meta name="author" content="expansive designs" />
+            <meta name="keywords" content="website template" />
+            <meta name="robots" content="noimageindex" />
 
-            <title>{apiData.meta.title}</title>
+            <title>coachme template</title>
           </Helmet>
-
           <main>
             <div id="home"></div>
-
             <Banner data={apiData.banner} />
 
             <QuoteHero data={apiData.quote} />

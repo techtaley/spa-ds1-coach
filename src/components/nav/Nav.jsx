@@ -58,7 +58,7 @@ export default function Nav() {
               // <NavLink className="nav-link" to={`/${item.link}`}>
               //   {item.title}
               // </NavLink>
-              <a href={`#${item.link}`} className="nav-link">
+              <a href={`#${item.link}`} className="nav-link" key={item.id}>
                 {item.title}
               </a>              
           ))}

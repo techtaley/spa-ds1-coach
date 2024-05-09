@@ -9,10 +9,11 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "proxy": "http://localhost:4000/",
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@reduxjs/toolkit": "^1.9.7",
-    "axios": "^1.6.1",
+    "axios": "^1.6.8",
     "dotenv": "^16.3.1",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",

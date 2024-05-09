@@ -79,6 +79,8 @@ img {
   align-items: center;
   margin: 0;
   margin-bottom: 100px;
+  height: 500px;
+  overflow: hidden;
   box-shadow: 10px 10px 10px 10px rgba(89, 70, 70, 0.25);
 }
 .banner-div .hero-img {

@@ -17,7 +17,7 @@ export default function LeftHero({data}) {
       <div className="hero column-div-left">
         <p>{title}</p>
         <h2>{desc}</h2>
-        {/* <Link className="bold">{btn}</Link> */}
+        <Link className="bold">{btn}</Link>
       </div>
     </div>
   );
