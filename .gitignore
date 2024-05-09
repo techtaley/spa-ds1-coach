@@ -1,51 +1,11 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
 node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
 package-lock.json
 
-public
-# /src/store
-# /src/store
-
-# /src/components
-# /src/pages
-
-/src/store/post.actions_disable.json
-/src/store/post.actions_v1.jsx
-/src/store/postSlice_v1.jsx
-
-/src/components/membership_disable
-/src/components/volunteer_disable
-
-/src/pages/membership_disable
-
-
-/src/components/contact/Contact3.jsx
-/src/pages/home/Home2.jsx
-
+credentials.txt
 .env
 
-credentials.txt
+/strapi
 
+/api/node_modules
+/api/package-lock.json
+/api/server.js

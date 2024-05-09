@@ -1,0 +1,144 @@
+// 20240509180140
+// http://localhost:4000/api/results
+
+{
+    "data": {
+      "id": 1,
+      "attributes": {
+        "createdAt": "2024-05-01T02:59:27.190Z",
+        "updatedAt": "2024-05-07T23:23:03.735Z",
+        "publishedAt": "2024-05-01T04:08:20.871Z",
+        "about": {
+          "id": 1,
+          "title": {
+            "id": 1,
+            "title": "About",
+            "desc": "Discover a holistic approach to well-being with expert guidance, transformative practices, and valuable resources."
+          },
+          "card": [
+            {
+              "id": 1,
+              "url": "pexels-katrin-bolovtsova-7113503.jpg",
+              "alt": "image of a woman doing yoga",
+              "title": "Who we are",
+              "desc": "At CoachMe, we believe that everyone has the potential to achieve their goals and fulfill their dreams.",
+              "btn": null
+            },
+            {
+              "id": 2,
+              "url": "pexels-cottonbro-studio-5602461.jpg",
+              "alt": "image of yoga restreat room with bowls and incense",
+              "title": "What we do",
+              "desc": "Our mission is to empower individuals like you to unlock your full potential, overcome obstacles, and thrive in all aspects of life.",
+              "btn": null
+            },
+            {
+              "id": 3,
+              "url": "pexels-pixabay-355863.jpg",
+              "alt": "image of yoga retreat showing stack of rocks",
+              "title": "Our unicorn",
+              "desc": "Our coaches took up a similar journey and are here to support you every step of the way.",
+              "btn": null
+            }
+          ]
+        },
+        "services": {
+          "id": 1,
+          "title": {
+            "id": 3,
+            "title": "Services",
+            "desc": "Our team of coaches are highly trained professionals with years of experience helping individuals like you achieve success."
+          },
+          "card": [
+            {
+              "id": 1,
+              "title": "Personal Coaching",
+              "desc": "Our certified personal coaches specialize in helping you identify your strengths and develop a personalized roadmap for success.",
+              "btn": "LEARN MORE",
+              "link": "personal-coaching-form"
+            },
+            {
+              "id": 2,
+              "title": "Career Coaching",
+              "desc": "Whether you're navigating a career transition, seeking to advance in your current job, or exploring new opportunities, our career coaches are here to help.",
+              "btn": "LEARN MORE",
+              "link": "career-coaching-form"
+            },
+            {
+              "id": 3,
+              "title": "Wellness Coaching",
+              "desc": "Our wellness coaches work with you to create sustainable habits, set achievable health goals, and overcome obstacles to living your best life.",
+              "btn": "LEARN MORE",
+              "link": "wellness-coaching-form"
+            }
+          ]
+        },
+        "footer": [
+          {
+            "id": 2,
+            "title": "services",
+            "link": "services"
+          },
+          {
+            "id": 3,
+            "title": "about",
+            "link": "about"
+          },
+          {
+            "id": 4,
+            "title": "contact",
+            "link": "contact"
+          },
+          {
+            "id": 5,
+            "title": "terms",
+            "link": "terms"
+          },
+          {
+            "id": 6,
+            "title": "privacy",
+            "link": "privacy"
+          }
+        ],
+        "meta": {
+          "id": 2,
+          "title": "CoachMe Services | Discover a holistic approach to well-being.",
+          "desc": "CoachMe has a staff of trained professionals with years of experience helping individuals like you achieve success.",
+          "keywords": "CoachMe has a staff of trained professionals with years of experience helping individuals like you achieve success."
+        },
+        "banner": {
+          "id": 1,
+          "url": "pexels-savanna-goldring-5184327.jpg",
+          "alt": "image of a woman doing yoga",
+          "desc": "Take the first step towards a more fulfilling life.",
+          "btn": "BOOK A CALL",
+          "link": "https://booking.setmore.com/scheduleappointment/82a0283e-e80b-4e84-9c81-11dcb5523a62/services/s108f7f58033f374437cfb243e6d7f55746898b0e/bookappointment"
+        },
+        "nav": [
+          {
+            "id": 7,
+            "title": "services",
+            "link": "services"
+          },
+          {
+            "id": 8,
+            "title": "about",
+            "link": "about"
+          },
+          {
+            "id": 9,
+            "title": "contact",
+            "link": "contact"
+          }
+        ],
+        "quote": {
+          "id": 1,
+          "quote": "Life isn't about waiting for the storm to pass...  It's about learning to dance in the rain.",
+          "author": "~ Vivian Greene"
+        }
+      }
+    },
+    "meta": {
+      
+    }
+  }

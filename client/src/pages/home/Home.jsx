@@ -40,14 +40,15 @@ export default function Home() {
 
 
   useEffect(() => {
-    //const url = import.meta.env.VITE_STRAPI_URL;
+    //const url = import.meta.env.VITE_STRAPI_URL;  //API call from FE
 
     const fetchData = async () => {
       try {
 
-        //const res = await fetch(url);  //hides full url in .env file
+        //const res = await fetch(url);  //API call from FE
 
-        const res = await fetch(`/api/results`);  //serving up api on port 4000 using proxy server
+        //Serving Rest API on Proxy Server - same BE port 4000 (via 5173)
+        const res = await fetch(`/api/results`);  
         const results = await res.json();
         setLoading(false);
 
