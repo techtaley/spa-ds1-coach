@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_title_titles",
+  "info": {
+    "displayName": "title",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 20,
+      "minLength": 5
+    },
+    "desc": {
+      "type": "text",
+      "required": true,
+      "maxLength": 133,
+      "minLength": 20
+    }
+  }
+}

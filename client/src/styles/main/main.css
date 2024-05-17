@@ -5,6 +5,17 @@ body p {
   font-size: 125%;
 }
 
+.btn {
+  padding: 3%;
+  font-size: 1.25rem;
+  border-radius: 5%;
+  margin: 20px 0;
+}
+
+a.btn:link, a.btn:visited, a.btn:hover, a.btn:active {
+  color: #fefefe;
+}
+
 .big-quote {
   font-size: 7rem;
   color: #0d6959;
@@ -89,7 +100,8 @@ img {
 }
 .banner-div .banner-text {
   position: absolute;
-  left: 20px;
+  text-align: right;
+  left: -15px;
   margin-top: 50px;
   width: 40%;
   font-size: 1.75rem;
@@ -98,7 +110,7 @@ img {
 @media screen and (max-width: 926px) {
   .banner-div .banner-text {
     width: 40%;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -112,6 +124,7 @@ img {
   padding: 2%;
   font-size: 1.25rem;
   border-radius: 5%;
+  align-items: right;
 }
 
 .nav-icon {
@@ -442,32 +455,6 @@ img {
   display: none;
 }
 
-.column-div-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-  margin: 0;
-  text-align: right;
-  margin-bottom: 60px;
-}
-.column-div-right p {
-  color: #0d6959;
-}
-
-.column-div-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 0;
-  text-align: left;
-  margin-bottom: 60px;
-}
-.column-div-left p {
-  color: #0d6959;
-}
-
 .left-hero {
   display: flex;
   flex-direction: row;
@@ -480,7 +467,7 @@ img {
   width: 80%;
 }
 .left-hero .hero-img {
-  width: 400px;
+  height: 300px;
   margin: 0 20px;
 }
 .left-hero .wrap {
@@ -489,6 +476,132 @@ img {
   gap: 20px;
   width: 500px;
   flex-wrap: wrap;
+}
+
+.left-image-hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 0;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 60px 0;
+  padding-left: 10%;
+  text-align: left;
+  width: 100%;
+  background-color: #888888;
+}
+.left-image-hero .hero-image {
+  height: 500px;
+  margin: 0 20px;
+}
+.left-image-hero .left-text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  text-align: left;
+  margin-bottom: 0px;
+}
+.left-image-hero .left-text-div p {
+  color: #fefefe;
+  font-size: 3rem;
+  margin-left: -100px;
+}
+.left-image-hero .left-text-div h3 {
+  background-color: #fefefe;
+  padding: 30px 20px;
+  width: 400px;
+  border-radius: 2%;
+  margin-left: -100px;
+  font-weight: normal;
+  line-height: 1.3;
+}
+.left-image-hero .left-text-div .btn {
+  background-color: #bb8b10;
+  font-weight: bold;
+  margin-left: -100px;
+}
+.left-image-hero .left-quote-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 400px;
+  height: 500px;
+  margin-left: 10%;
+  font-family: "Rouge Script", cursive;
+  padding: 2%;
+  font-size: 1.875rem;
+  text-align: center;
+}
+
+.right-image-hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 60px 0;
+  padding-right: 10%;
+  text-align: right;
+  width: 100%;
+  right: -10%;
+}
+.right-image-hero .hero-image {
+  height: 500px;
+  margin: 0 20px;
+}
+.right-image-hero .right-text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0;
+  text-align: right;
+  margin-bottom: 0px;
+}
+.right-image-hero .right-text-div p {
+  color: #333;
+  font-size: 3rem;
+  margin-right: -90px;
+  z-index: 99;
+}
+.right-image-hero .right-text-div h3 {
+  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #bb8b10;
+  padding: 30px 20px;
+  width: 400px;
+  border-radius: 2%;
+  margin-right: -90px;
+  color: #fefefe;
+  z-index: 99;
+  font-weight: normal;
+  line-height: 1.3;
+}
+.right-image-hero .right-text-div .btn {
+  background-color: #333;
+  font-weight: bold;
+  margin-right: -90px;
+  z-index: 99;
+}
+.right-image-hero .right-quote-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  width: 400px;
+  height: 500px;
+  margin-right: 10%;
+  padding: 2%;
+  font-family: "Rouge Script", cursive;
+  font-size: 1.875rem;
 }
 
 .square-li {
@@ -1078,6 +1191,13 @@ img {
   .hero {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .hero .text, .hero .quote, .hero .image, .hero .btn {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
   }
   .counter-box {

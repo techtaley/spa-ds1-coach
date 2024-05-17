@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_quotedata_quote_data",
+  "info": {
+    "displayName": "quote",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "text"
+    },
+    "author": {
+      "type": "string"
+    }
+  }
+}

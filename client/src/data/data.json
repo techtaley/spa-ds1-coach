@@ -47,6 +47,8 @@
             {
               "id": 0,
               "title": "Personal Coaching",
+              "url": "pexels-polina-zimmerman-3958412.jpg",
+              "alt": "",
               "desc": "Our certified personal coaches specialize in helping you identify your strengths and develop a personalized roadmap for success.",
               "btn": "START BUILDING",
               "link": "personal-coaching-form"
@@ -54,6 +56,8 @@
             {
               "id": 1,
               "title": "Career Coaching",
+              "url": "pexels-cottonbro-4065158.jpg",
+              "alt": "",              
               "desc": "Whether you're navigating a career transition, seeking to advance in your current job, or exploring new opportunities, our career coaches are here to help.",
               "btn": "START GROWING",
               "link": "career-coaching-form"
@@ -61,6 +65,8 @@
             {
               "id": 2,
               "title": "Wellness Coaching",
+              "url": "pexels-nappy-936075.jpg",
+              "alt": "",              
               "desc": "Our health and wellness coaches work with you to create sustainable habits, set achievable health goals, and overcome obstacles to living your best life.",
               "btn": "START HEALING",
               "link": "wellness-coaching-form"

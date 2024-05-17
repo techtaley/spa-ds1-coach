@@ -4,7 +4,6 @@ package-lock.json
 credentials.txt
 .env
 
-/strapi
-
 /api/node_modules
 /api/package-lock.json
+

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_card_cards",
+  "info": {
+    "displayName": "TextCard",
+    "icon": "grid",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 17,
+      "minLength": 3
+    },
+    "desc": {
+      "type": "text",
+      "required": true,
+      "maxLength": 155,
+      "minLength": 80
+    },
+    "btn": {
+      "type": "string",
+      "default": "link",
+      "required": true,
+      "maxLength": 40,
+      "minLength": 3
+    },
+    "link": {
+      "type": "string",
+      "required": true,
+      "maxLength": 40,
+      "minLength": 3
+    }
+  }
+}

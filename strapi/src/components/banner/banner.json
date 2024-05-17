@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_banner_banners",
+  "info": {
+    "displayName": "banner",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "alt": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "minLength": 20
+    },
+    "desc": {
+      "type": "string",
+      "maxLength": 51,
+      "minLength": 20
+    },
+    "btn": {
+      "type": "string",
+      "required": true,
+      "maxLength": 15,
+      "minLength": 10
+    },
+    "link": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 200,
+      "required": true
+    }
+  }
+}

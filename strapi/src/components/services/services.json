@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_services_services",
+  "info": {
+    "displayName": "services",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "title.title"
+    },
+    "card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "imagecard.image-card"
+    },
+    "quote": {
+      "type": "component",
+      "repeatable": true,
+      "component": "quote.quote-data"
+    }
+  }
+}

@@ -21,6 +21,8 @@ import InstagramFeeds from "../../components/instagramfeeds/InstagramFeeds";
 import YouTubeFeeds from "../../components/youtubefeed/YouTubeFeeds";
 import data from "../../data/data.json";
 import { Helmet } from "react-helmet";
+import LeftImageHero from "../../components/hero/LeftImageHero";
+import RightImageHero from "../../components/hero/RightImageHero";
 
 export default function Home() {
   const [openForm, setOpenForm] = useState(false);
@@ -28,6 +30,33 @@ export default function Home() {
   const [apiData, setApiData] = useState();
 
   const [loading, setLoading] = useState(true);
+
+  // const serviceData = [
+  //   {
+  //     "title": "Personal Coaching",
+  //     "desc": "Our certified personal coaches specialize in helping you identify your strengths and develop a personalized roadmap for success.",
+  //     "url": "pexels-polina-zimmerman-3958412.jpg",
+  //     "alt": "photo of a sad women with hands over face and coach hand on her head and shoulder",
+  //     "btn": "LEARN MORE",
+  //     "link": ""
+  //   },
+  //   {
+  //     "title": "Wellness Coaching",
+  //     "desc": "Our wellness coaches work with you to create sustainable habits, set achievable health goals, and overcome obstacles to living your best life.",
+  //     "url": "pexels-nappy-936075.jpg",
+  //     "alt": "photo of an athletic black woman with black shorts and tank running up stairs",      
+  //     "btn": "LEARN MORE",
+  //     "link": ""
+  //   },
+  //   {
+  //     "title": "Career Coaching",
+  //     "desc": "Whether you're navigating a career transition, seeking to advance in your current job, or exploring new opportunities, our career coaches are here to help.",
+  //     "url": "pexels-cottonbro-4065158.jpg",
+  //     "alt": "photo of a young white male with tablet providing guidance to a young white woman using a laptop",      
+  //     "btn": "LEARN MORE",
+  //     "link": ""
+  //   }            
+  // ]
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -83,10 +112,17 @@ export default function Home() {
 
             <QuoteHero data={apiData.quote} />
 
-            <LeftTitle data={apiData.services.title.title} />
+            <LeftTitle data={apiData.services.title} />
 
             <div id="services"></div>
-            <div className="hero multi-box-row">
+
+            <LeftImageHero data={serviceData[0]} />
+
+            <RightImageHero data={serviceData[1]} />
+
+            <LeftImageHero data={serviceData[2]} />
+
+            {/* <div className="hero multi-box-row">
               {apiData.services.card.map((service) => (
                 <MultiBoxHero
                   data={service}
@@ -95,14 +131,14 @@ export default function Home() {
                   setSelected={setSelected}
                 />
               ))}
-            </div>
+            </div> */}
 
             <div className={`modal-content ${openForm ? "show" : "hide"}`}>
               <GoogleForm setOpenForm={setOpenForm} selected={selected} />
             </div>
 
             <div id="about"></div>
-            <LeftTitle data={apiData.about.title.title} />
+            <LeftTitle data={apiData.about.title} />
 
             <LeftHero data={apiData.about.card[0]} />
 

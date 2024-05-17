@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_meta_metas",
+  "info": {
+    "displayName": "meta",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "keywords": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_imagecard_image_cards",
+  "info": {
+    "displayName": "ImageCard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "maxLength": 200,
+      "minLength": 5
+    },
+    "alt": {
+      "type": "string",
+      "required": true,
+      "maxLength": 200,
+      "minLength": 3
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "minLength": 3
+    },
+    "desc": {
+      "type": "text",
+      "required": true,
+      "maxLength": 300,
+      "minLength": 10
+    },
+    "btn": {
+      "type": "string",
+      "maxLength": 15,
+      "minLength": 3
+    }
+  }
+}

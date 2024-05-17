@@ -1,0 +1,52 @@
+{
+  "kind": "singleType",
+  "collectionName": "results",
+  "info": {
+    "singularName": "result",
+    "pluralName": "results",
+    "displayName": "result",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "meta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.meta"
+    },
+    "quote": {
+      "type": "component",
+      "repeatable": false,
+      "component": "quote.quote-data"
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": true,
+      "component": "link.link"
+    },
+    "nav": {
+      "type": "component",
+      "repeatable": true,
+      "component": "link.link"
+    },
+    "about": {
+      "displayName": "about",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.about"
+    },
+    "services": {
+      "type": "component",
+      "repeatable": false,
+      "component": "services.services"
+    },
+    "banner": {
+      "type": "component",
+      "repeatable": true,
+      "component": "banner.banner"
+    }
+  }
+}
