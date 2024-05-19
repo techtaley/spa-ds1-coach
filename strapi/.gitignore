@@ -116,3 +116,6 @@ exports
 node_modules
 package-lock.json
 
+client
+api
+

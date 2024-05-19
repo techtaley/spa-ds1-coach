@@ -69,7 +69,10 @@ export default function Home() {
 
 
   useEffect(() => {
-    const url = import.meta.env.VITE_STRAPI_URL;  //using Strapi
+    //const url = import.meta.env.VITE_STRAPI_URL;  //using Strapi
+
+    const url = "http://localhost:1337/api/result?populate=deep";
+    //const url="https://coachme-api.techtaleyportfolio.com/api/result?populate=deep"
 
     const fetchData = async () => {
       try {
@@ -108,7 +111,7 @@ export default function Home() {
           </Helmet>
           <main>
             <div id="home"></div>
-            <Banner data={apiData.banner} />
+            <Banner data={apiData.banner[0]} />
 
             <QuoteHero data={apiData.quote} />
 
@@ -116,11 +119,11 @@ export default function Home() {
 
             <div id="services"></div>
 
-            <LeftImageHero data={serviceData[0]} />
+            <LeftImageHero data={apiData.services.card[0]} />
 
-            <RightImageHero data={serviceData[1]} />
+            <RightImageHero data={apiData.services.card[1]} />
 
-            <LeftImageHero data={serviceData[2]} />
+            <LeftImageHero data={apiData.services.card[2]} />
 
             {/* <div className="hero multi-box-row">
               {apiData.services.card.map((service) => (
