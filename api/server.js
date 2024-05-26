@@ -25,7 +25,7 @@ app.post('/api/results', async (req, res) => {
 app.get('/')
 
 //"R"EQUEST/GET ALL - .get(`/posts`)   OR   //GET BY ID - .get(`/route/${id}`)
-app.get("/api/results", async (req, res) => {  //need a route to see on http://localhost:4000 
+app.get("/api/results", async (req, res) => {  //fetch https://coach-api on route http://localhost:4000/api/results 
     try {        
         const response = await fetch(`https://coachme-api.techtaleyportfolio.com/api/result?populate=deep`)
         const data = await response.json()

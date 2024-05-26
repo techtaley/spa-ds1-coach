@@ -1,24 +1,14 @@
 @import './../variables/variables.scss';
 
 body {
-    font-size: 100%;
+    font-family: $fontfamily;
+    font-family: "Roboto Condensed", sans-serif;
 
-    p {
-        font-size: 125%;
+    h1, h2, h3, h4, h5, p, div {
+        font-family: $fontfamily;
+        font-family: "Roboto Condensed", sans-serif;
     }
 }
-
-// .rouge-script-regular {
-//     font-family: "Rouge Script", cursive;
-//     font-weight: 400;
-//     font-style: normal;
-// }
-
-// .roboto-condensed {
-//     font-family: "Roboto Condensed", sans-serif;
-//     font-optical-sizing: auto;
-//     font-style: normal;
-// }
 
 .btn {
     padding: 3%;
@@ -29,7 +19,6 @@ body {
 
 a.btn:link, a.btn:visited, a.btn:hover, a.btn:active {
     color: $light-lt;
-
 }
 
 .big-quote {
@@ -91,7 +80,7 @@ img {
 .margin70 {
     width: 70%; 
     margin: auto;
-    margin-bottom: 60px;;         
+    margin-bottom: 60px;         
 } 
 
 .margin80 {
@@ -193,7 +182,7 @@ img {
     @include flexdisplay(row, flex-start, center);
     gap: 50px;
     margin: auto;
-    margin-bottom: 40px;
+    margin: 80px auto;
     width: 70%;
 
     h2 {
@@ -496,9 +485,10 @@ img {
 }
 
 .darkbkg {
-    background-color: $accent-dk;
-    color: $accent-lt;
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: $light-lt;
+    gap: 20px;
+    font-size: $subheading;
 }
 
 .event {
@@ -534,6 +524,42 @@ img {
 
 .hidden {
     display: none; 
+}
+
+.parallel-hero {
+    //background-image: url({`./../../assets/${url}`});
+
+    /* Set a specific height */
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+
+    .parallel-text {
+        width: 50%;
+        text-align: center;
+        color: $light-lt;  
+        background-color: rgba(0, 0, 0, 0.3);  
+        padding: 1%;
+        
+        p {
+            font-size: $headline;
+        }
+    }
+}
+
+.parallel-desc {
+    width: 100%;
+    padding: 5% 15%;
+    margin: 0px auto;
+    text-align: center;
 }
 
 // .column-div-right {
@@ -579,11 +605,10 @@ img {
 } 
 
 .left-image-hero { //d, j, a
-    @include flexdisplay(row, flex-start, flex-end); 
+    @include flexdisplay(row, center, center); 
     margin: auto;
     margin-bottom: 10px;
     padding: 60px 0;
-    padding-left: 10%;  
     text-align: left;  
     width: 100%;
     background-color: #888888;
@@ -605,12 +630,14 @@ img {
         }
 
         h3 {
-            background-color: $light-lt;
+            //background-color: $light-lt;
+            background-color: rgba(236, 225, 225, 0.65);
+
             padding: 30px 20px;
             width: 400px;
             border-radius: 2%;
             margin-left: -100px;
-            font-weight: normal;
+            font-weight: bold;
             line-height: 1.3;
         }
 
@@ -624,25 +651,23 @@ img {
     
     .left-quote-div {
         @include flexdisplay(column, center, center);
-        width: 400px;
-        height: 500px;
-        margin-left: 10%;
+        width: 500px;
+        height: auto;
+        margin-left: 5%;
         font-family: $script;
-        padding: 2%;
-        font-size: $heading;
+        padding: 2% 3%;
+        font-size: $headline;
         text-align: center;
     }
 } 
 
 .right-image-hero { //d, j, a
-    @include flexdisplay(row, flex-end, flex-end); 
+    @include flexdisplay(row, center, center); 
     margin: auto;
     margin-bottom: 10px;
     padding: 60px 0;
-    padding-right: 10%;  
     text-align: right;  
     width: 100%;
-    right: -10%;
 
     .hero-image { 
         height: 500px;
@@ -653,10 +678,9 @@ img {
         @include flexdisplay(column, flex-end, flex-end); 
         text-align: right; 
         margin-bottom: 0px;
-
         
         p {
-            color: $dark-dk;
+            color: $accent-lt;
             font-size: $headline;
             margin-right: -90px;            
             z-index: 99;
@@ -664,19 +688,19 @@ img {
 
         h3 {
             background-color: rgba(0, 0, 0, 0.6);
-            background-color: $accent-lt;
+            //background-color: $accent-lt;
             padding: 30px 20px;
             width: 400px;
             border-radius: 2%;
             margin-right: -90px;
             color: $light-lt;
             z-index: 99;
-            font-weight: normal;
+            font-weight: bold;
             line-height: 1.3;            
         }
 
         .btn {
-            background-color: $dark-dk;
+            background-color: $accent-lt;
             font-weight: bold;
             margin-right: -90px;  
             z-index: 99;          
@@ -684,13 +708,13 @@ img {
     }  
     
     .right-quote-div {
-        @include flexdisplay(column, flex-start, center);
-        width: 400px;
-        height: 500px;
-        margin-right: 10%;
-        padding: 2%;
+        @include flexdisplay(column, center, center);
+        width: 500px;
+        margin-right: 5%;
+        padding: 2% 3%;
         font-family: $script;
-        font-size: $heading;
+        font-size: $headline;
+        text-align: center
     }  
 } 
 
@@ -702,15 +726,34 @@ img {
     @include flexdisplay(column, space-between, center); 
     margin: auto;
     margin-bottom: 60px;;
-    gap: 20px;
+    gap: 20px;   
 }    
 
 .multi-box-row {
-    @include flexdisplay(row, space-between, flex-start); 
-    margin: 60px auto;
-    margin-bottom: 60px;
-    gap: 10px;
-    width: 70%;
+    @include flexdisplay(row, space-evenly, flex-start); 
+    width: 100%;
+    padding-top: 5%;
+    //border: 5px dotted black;
+
+    .statistics-box {
+        @include flexdisplay(column, center, center);
+        margin: 0px 5%;
+    
+        .icon {
+          color: $light-lt;
+          font-weight: bold;
+          padding: 0px;
+          margin: 0px;
+
+          .icons {
+            color: $accent-lt;
+           }
+        }
+
+        .title {
+            color: $accent-lt;
+          }        
+      }    
 
     // &.contact {
     //     gap: 30px;
@@ -786,7 +829,7 @@ img {
 .modal-content {
     display: none;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 99; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -1277,35 +1320,140 @@ img {
     }
 }  
 
+// @media only screen and (max-device-width: 1366px) {
+
+//   }
+
 
 @media only screen and (max-width: 992px) {  
+
+    .parallel-hero {
+        background-attachment: scroll;
+      }
 
     .sm-quote {
         font-size: $heading;
     }
 
-    .quote-text {
-        font-size: $heading;
-    }    
+    .left-image-hero, .right-image-hero {
+        .quote-text {
+            font-size: $heading;
+        }    
+    }
     
     .left-hero, .right-hero {
         margin-bottom: 0px;
         flex-direction: column;
     }
+
+    .left-image-hero { //d, j, a
+        @include flexdisplay(column, center, center); 
+        margin: 0  auto; 
+        width: 100%;   
+       
+        .left-text-div {
+            @include flexdisplay(column, center, center); 
+            text-align: center; 
+            margin-bottom: 0px;
+            
+            p {
+                //margin-left: -100px;
+                margin: 20px auto;
+            }
+    
+            h3 {
+                //margin-left: -100px;
+                margin: 20px auto;
+            }
+    
+            .btn {
+                //margin-left: -100px;
+                margin: 50px auto;
+            }        
+        }      
+        
+        .left-quote-div {
+            @include flexdisplay(column, center, center);
+            margin: 0px auto;
+            width: 100%;
+        }
+    } 
+    
+    .right-image-hero { //d, j, a
+        @include flexdisplay(column, center, center); 
+        margin: auto;
+        
+        .right-text-div {
+            @include flexdisplay(column, center, center); 
+            text-align: center; 
+            margin-bottom: 0px;
+                
+            p {
+                //margin-right: -90px;
+                margin: 20px auto;            
+            }
+    
+            h3 {
+                //margin-right: -90px;
+                margin: 20px auto;
+            }
+    
+            .btn {
+                //margin-right: -90px;
+                margin: 50px auto;
+            }
+        }  
+        
+        .right-quote-div {
+            @include flexdisplay(column, center, center);
+            margin: 0px auto;
+            width: 100%;
+        }  
+    } 
+    
+
+    // .left-image-hero {
+    //     padding: 0px;
+    // }
+
+    // .quote {
+    //     margin: 0px auto;
+    //     padding: 0px;
+    // }
     
     .hero {                        
         flex-direction: column;
         align-items: center;
         text-align: center;
         justify-content: center;
+        width: 100%;
+        margin: 0px auto;
 
+        &.image {
+            padding: 0;            
+        }
+
+        .text {
+            margin: 0px;
+        }
+        
         .text, .quote, .image, .btn {  
             flex-direction: column;      
             align-items: center;
             justify-content: center;  
             text-align: center;
         }
+
+        .btn {
+            margin: 50px auto;
+        }
     }
+
+    .multi-box-row {    
+        .statistics-box {
+            margin-bottom: 6%;    
+        }
+    }  
 
     .counter-box {
         margin-bottom: 0px;
@@ -1454,6 +1602,43 @@ img {
             margin-bottom: 0px;
         }
     }
+    
+    .left-image-hero, .right-image-hero {
+        .quote-text {
+            font-size: $normalfont;
+        }    
+    }       
+}
+
+@media only screen and (max-width: 480px){
+    .left-image-hero .left-quote-div,
+    .right-image-hero .right-quote-div
+     {
+        margin: 0px auto;
+        width: 100%;
+        padding: 10%;
+    }
+
+    .left-image-hero .left-text-div h3,
+    .right-image-hero .right-text-div h3    
+    {
+        margin: 20px auto;
+        background-color: $accent-lt;
+        width: 100%;
+        padding: 10%;
+    }
+
+    .left-image-hero .left-text-div h3
+    {        
+        background-color: $light-lt;    
+    }
+
+
+    .banner-div, .hero-img {
+        height: auto;
+        box-shadow: none;
+    }
+
 }
 
 

@@ -1,3 +1,5 @@
+//@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rouge+Script&display=swap');
+
 //fonts
 $captionfont: .85rem;             //paragraph - 16px
 $normalfont: 1.25rem;    	     //paragraph fonts-20px
@@ -30,9 +32,34 @@ $light-lt: #fefefe;
 // $lightslategrey:  #d3d3d3;
 // $white: #ffffff; 
 
+//font-family
 $script: "Rouge Script", cursive;
+$fontfamily: "Roboto Condensed", sans-serif;
 
+// .rouge-script-regular {
+//     font-family: "Rouge Script", cursive;
+//     font-weight: 400;
+//     font-style: normal;
+// }
 
+// .roboto-condensed-200 {
+//     font-family: "Roboto Condensed", sans-serif;
+//     font-optical-sizing: auto;
+//     font-weight: 200;
+//     font-style: normal;
+//   }      
+
+// .rouge-script-regular {
+//     font-family: "Rouge Script", cursive;
+//     font-weight: 400;
+//     font-style: normal;
+// }
+
+// .roboto-condensed {
+//     font-family: "Roboto Condensed", sans-serif;
+//     font-optical-sizing: auto;
+//     font-style: normal;
+// }
 
 //mixins
 @mixin flexdisplay($direction, $justifycontent: none, $alignItems: none){    

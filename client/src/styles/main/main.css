@@ -1,8 +1,10 @@
 body {
-  font-size: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
-body p {
-  font-size: 125%;
+body h1, body h2, body h3, body h4, body h5, body p, body div {
+  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .btn {
@@ -163,7 +165,7 @@ img {
   margin: 0;
   gap: 50px;
   margin: auto;
-  margin-bottom: 40px;
+  margin: 80px auto;
   width: 70%;
 }
 .left h2 {
@@ -414,9 +416,10 @@ img {
 }
 
 .darkbkg {
-  background-color: #0d6959;
-  color: #bb8b10;
-  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fefefe;
+  gap: 20px;
+  font-size: 1.563rem;
 }
 
 .event {
@@ -455,6 +458,37 @@ img {
   display: none;
 }
 
+.parallel-hero {
+  /* Set a specific height */
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallel-hero .parallel-text {
+  width: 50%;
+  text-align: center;
+  color: #fefefe;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1%;
+}
+.parallel-hero .parallel-text p {
+  font-size: 3rem;
+}
+
+.parallel-desc {
+  width: 100%;
+  padding: 5% 15%;
+  margin: 0px auto;
+  text-align: center;
+}
+
 .left-hero {
   display: flex;
   flex-direction: row;
@@ -481,13 +515,12 @@ img {
 .left-image-hero {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   margin: auto;
   margin-bottom: 10px;
   padding: 60px 0;
-  padding-left: 10%;
   text-align: left;
   width: 100%;
   background-color: #888888;
@@ -511,12 +544,12 @@ img {
   margin-left: -100px;
 }
 .left-image-hero .left-text-div h3 {
-  background-color: #fefefe;
+  background-color: rgba(236, 225, 225, 0.65);
   padding: 30px 20px;
   width: 400px;
   border-radius: 2%;
   margin-left: -100px;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.3;
 }
 .left-image-hero .left-text-div .btn {
@@ -530,28 +563,26 @@ img {
   justify-content: center;
   align-items: center;
   margin: 0;
-  width: 400px;
-  height: 500px;
-  margin-left: 10%;
+  width: 500px;
+  height: auto;
+  margin-left: 5%;
   font-family: "Rouge Script", cursive;
-  padding: 2%;
-  font-size: 1.875rem;
+  padding: 2% 3%;
+  font-size: 3rem;
   text-align: center;
 }
 
 .right-image-hero {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   margin: auto;
   margin-bottom: 10px;
   padding: 60px 0;
-  padding-right: 10%;
   text-align: right;
   width: 100%;
-  right: -10%;
 }
 .right-image-hero .hero-image {
   height: 500px;
@@ -567,25 +598,24 @@ img {
   margin-bottom: 0px;
 }
 .right-image-hero .right-text-div p {
-  color: #333;
+  color: #bb8b10;
   font-size: 3rem;
   margin-right: -90px;
   z-index: 99;
 }
 .right-image-hero .right-text-div h3 {
   background-color: rgba(0, 0, 0, 0.6);
-  background-color: #bb8b10;
   padding: 30px 20px;
   width: 400px;
   border-radius: 2%;
   margin-right: -90px;
   color: #fefefe;
   z-index: 99;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.3;
 }
 .right-image-hero .right-text-div .btn {
-  background-color: #333;
+  background-color: #bb8b10;
   font-weight: bold;
   margin-right: -90px;
   z-index: 99;
@@ -593,15 +623,15 @@ img {
 .right-image-hero .right-quote-div {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin: 0;
-  width: 400px;
-  height: 500px;
-  margin-right: 10%;
-  padding: 2%;
+  width: 500px;
+  margin-right: 5%;
+  padding: 2% 3%;
   font-family: "Rouge Script", cursive;
-  font-size: 1.875rem;
+  font-size: 3rem;
+  text-align: center;
 }
 
 .square-li {
@@ -622,13 +652,31 @@ img {
 .multi-box-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
   margin: 0;
-  margin: 60px auto;
-  margin-bottom: 60px;
-  gap: 10px;
-  width: 70%;
+  width: 100%;
+  padding-top: 5%;
+}
+.multi-box-row .statistics-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin: 0px 5%;
+}
+.multi-box-row .statistics-box .icon {
+  color: #fefefe;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+}
+.multi-box-row .statistics-box .icon .icons {
+  color: #bb8b10;
+}
+.multi-box-row .statistics-box .title {
+  color: #bb8b10;
 }
 .multi-box-row .box {
   display: flex;
@@ -691,7 +739,7 @@ img {
 .modal-content {
   display: none;
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 99; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -1178,27 +1226,115 @@ img {
 }
 
 @media only screen and (max-width: 992px) {
+  .parallel-hero {
+    background-attachment: scroll;
+  }
   .sm-quote {
     font-size: 1.875rem;
   }
-  .quote-text {
+  .left-image-hero .quote-text, .right-image-hero .quote-text {
     font-size: 1.875rem;
   }
   .left-hero, .right-hero {
     margin-bottom: 0px;
     flex-direction: column;
   }
+  .left-image-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .left-image-hero .left-text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .left-image-hero .left-text-div p {
+    margin: 20px auto;
+  }
+  .left-image-hero .left-text-div h3 {
+    margin: 20px auto;
+  }
+  .left-image-hero .left-text-div .btn {
+    margin: 50px auto;
+  }
+  .left-image-hero .left-quote-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin: 0px auto;
+    width: 100%;
+  }
+  .right-image-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin: auto;
+  }
+  .right-image-hero .right-text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .right-image-hero .right-text-div p {
+    margin: 20px auto;
+  }
+  .right-image-hero .right-text-div h3 {
+    margin: 20px auto;
+  }
+  .right-image-hero .right-text-div .btn {
+    margin: 50px auto;
+  }
+  .right-image-hero .right-quote-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin: 0px auto;
+    width: 100%;
+  }
   .hero {
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
+    width: 100%;
+    margin: 0px auto;
+  }
+  .hero.image {
+    padding: 0;
+  }
+  .hero .text {
+    margin: 0px;
   }
   .hero .text, .hero .quote, .hero .image, .hero .btn {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+  .hero .btn {
+    margin: 50px auto;
+  }
+  .multi-box-row .statistics-box {
+    margin-bottom: 6%;
   }
   .counter-box {
     margin-bottom: 0px;
@@ -1314,5 +1450,30 @@ img {
   }
   .left-center .subheading, .left-hero .subheading {
     margin-bottom: 0px;
+  }
+  .left-image-hero .quote-text, .right-image-hero .quote-text {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .left-image-hero .left-quote-div,
+  .right-image-hero .right-quote-div {
+    margin: 0px auto;
+    width: 100%;
+    padding: 10%;
+  }
+  .left-image-hero .left-text-div h3,
+  .right-image-hero .right-text-div h3 {
+    margin: 20px auto;
+    background-color: #bb8b10;
+    width: 100%;
+    padding: 10%;
+  }
+  .left-image-hero .left-text-div h3 {
+    background-color: #fefefe;
+  }
+  .banner-div, .hero-img {
+    height: auto;
+    box-shadow: none;
   }
 }/*# sourceMappingURL=main.css.map */

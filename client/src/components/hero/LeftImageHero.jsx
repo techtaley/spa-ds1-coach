@@ -2,8 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 
-export default function LeftImageHero({ data }) {
+export default function LeftImageHero({ data, quote, setOpenForm, openForm, setSelected }) { 
   const { title, desc, url, alt, btn, link } = data;
+
+  const handleClick = (e) => {
+    e.preventDefault();
+
+    setSelected(e.target.id);
+    
+    setOpenForm(!openForm)
+  }
 
   return (
     <div className="hero left-image-hero">
@@ -15,14 +23,12 @@ export default function LeftImageHero({ data }) {
         <p>{title}</p>
 
         <h3>{desc}</h3>
-        <Link className="btn bold">{btn}</Link>
+        <Link className="btn bold" id={title} onClick={handleClick}>{btn}</Link>
       </div>
 
       <div className="quote left-quote-div">
         <BiSolidQuoteAltLeft size={60} />
-        Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Mauris felis ex, interdum eget elementum maximus,
-        condimentum quis nulla.
+        {quote.quote}
       </div>
     </div>
   );
